@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+    {% include nav.html %}
+    <section class="jumbotron jumbotron-fluid">
+      <div class="container">
+	<h1>
+          {{ page.title }}
+	  <small class="text-muted">{{ page.subtitle }}</small>
+	</h1>
+	<p class="lead">{{ page.description }}</p>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            {{ content }}
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
