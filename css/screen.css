@@ -4,7 +4,6 @@
 
 body { font-family: Helvetica,Arial,sans-serif; }
 a:focus, a:hover, a:active { outline:none }
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
-  letter-spacing: 0.025rem;
-}
+h1, h2, h3, h4, h5, h6 { font-weight: 700; letter-spacing: 0.025rem; }
+.jumbotron { background-color: rgb(0 211 183); margin-bottom: 0 }
+.jumbotron .text-muted { color: ivory !important; }
