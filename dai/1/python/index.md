@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Dai
-subtitle: API
+subtitle: Python wrapper
 ---
 
 ## Introduction
