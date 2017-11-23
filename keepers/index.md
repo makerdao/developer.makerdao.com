@@ -6,3 +6,16 @@ description: Compete for profit opportunities created by the Maker system
 ---
 
 ## Introduction
+
+TODO
+
+## Strategies
+
+TODO
+
+### Example
+
+
+Showcase our reference implementation:
+
+[Python reference implementation](https://github.com/makerdao/keeper)

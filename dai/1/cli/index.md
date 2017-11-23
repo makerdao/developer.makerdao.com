@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Dai
-subtitle: pure memes
+subtitle: CLI
 dai-tub: 0xf24888d405776cc56d29e70448172380708bb7a5
 dai-top: 0xf24888d405776cc56d29e70448172380708bb7a5
 ---

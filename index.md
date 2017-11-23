@@ -14,15 +14,7 @@ A fully on-chain ERC20 exchange, with leverage by Maker.
 ## Borrow
 <p class="lead">Deposit collateral to access Dai-denominated credit.</p>
 
-Autonomous borrowing without a 3rd-party creditor. Borrow Dai by locking up ETH in the Maker collateral vault.
-
-[Learn More]()
-
-## Leverage
-<p class="lead">Re-invest borrowed Dai to build leveraged positions.</p>
-
-- Basic
-- Atomic
+Autonomous borrowing without any creditor. Borrow Dai by locking up ETH in the Maker collateral vault.
 
 [Learn More]()
 
@@ -40,16 +32,23 @@ When the system is running well, PETH is expected to increase in value over time
 ## Arbitrage
 <p class="lead">Compete for profit opportunities provided by the Maker platform.</p>
 
-- Boom. Decreases PETH supply. PETH is bought and burnt in return for Dai (system surplus - joy)
-- Bust. Increses PETH supply when insufficient collateral to sell-off. PETH is sold in exchange for Dai.
-- Boom and Bust discounts are fixed at 3% right? Or is that spread? What's the incentive to participate? OTC with no slippage.
-- Arbitrage seekers race to buy at a discount when surplus or deficit exists.
-- Sophisticated PETH holders can use bust to hedge against loss?
+- Maker creates a market for debt by buying and selling dai as the liquidator vault goes in and out of surplus.
+- PETH supply is adjusted to maintain its ratio to collateral proportional to circulating dai
+- Opportunities for arbitrage across DAI - PETH - USD pairs.
+
+[Learn More]({{ "dai/1/arbitrage/" | relative_url }})
+
+## Leverage
+<p class="lead">Re-invest borrowed Dai to build leveraged positions.</p>
+
+- Basic
+- Atomic
 
 [Learn More]()
 
 ## Hedge
-<p class="lead">The dai stable coin.</p>
-Take advantage of dai stability.
+<p class="lead">Dai stablility.</p>
+
+Buy dai as a shelter from volatility. Move value into dai during a periods of uncertainty.
 
 [Learn More]()
