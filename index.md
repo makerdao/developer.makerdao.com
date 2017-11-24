@@ -8,26 +8,26 @@ title: Developer
 
 A fully on-chain ERC20 exchange, with leverage by Maker.
 
-[Learn More]()
+[Learn More]({{ "oasis/" | relative_url }})
 
 
 ## Borrow
 <p class="lead">Deposit collateral to access Dai-denominated credit.</p>
 
-Autonomous borrowing without any creditor. Borrow Dai by locking up ETH in the Maker collateral vault.
+Autonomous borrowing - borrow Dai by locking up ETH in the Maker collateral vault.
 
-[Learn More]()
+[Learn More]({{ "dai/1/borrowing" | relative_url }})
 
 ## Earn
-<p class="lead">Pool collateral.</p>
+<p class="lead">Pool collateral and earn a return.</p>
 
-When the system is running well, PETH is expected to increase in value over time relative to ETH, providing a return to PETH holders.
+When the system is healthy, PETH is expected to increase in value over time relative to ETH, providing a return to collateral holders.
 
 - Stability fee. Liquidation penalty.
 - Downside risk.
-- A large collateral pool provides more assurance for `dai` holders.
+- A large collateral pool provides better assurance for `dai` holders.
 
-[Learn More]()
+[Learn More]({{ "dai/1/peth" | relative_url }})
 
 ## Arbitrage
 <p class="lead">Compete for profit opportunities provided by the Maker platform.</p>
@@ -43,6 +43,7 @@ When the system is running well, PETH is expected to increase in value over time
 
 - Basic
 - Atomic
+- Oasis Direct
 
 [Learn More]()
 
