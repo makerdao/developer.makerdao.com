@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+    {% include nav.html %}
+    <section class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1>
+          {{ page.title }}
+          <small class="text-muted">{{ page.subtitle }}</small>
+        </h1>
+        <p class="lead">{{ page.description }}</p>
+      </div>
+    </section>
+    <section class="bg-light pt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-3 side-panel">
+            <h6>
+              <a href={{ "dai/1/api/pool" | relative_url }}>Pool</a>
+            </h6>
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link" href={{ "dai/1/api/join" | relative_url }}>Join</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href={{ "dai/1/api/exit" | relative_url }}>Exit</a>
+              </li>
+            </ul>
+            <h6>
+              <a href={{ "dai/1/api/cdps" | relative_url }}>CDPs</a>
+            </h6>
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link" href={{ "dai/1/api/open" | relative_url }}>Open</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href={{ "dai/1/api/give" | relative_url }}>Give</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href={{ "dai/1/api/lock" | relative_url }}>Lock</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href={{ "dai/1/api/free" | relative_url }}>Free</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href={{ "dai/1/api/draw" | relative_url }}>Draw</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href={{ "dai/1/api/wipe" | relative_url }}>Wipe</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href={{ "dai/1/api/shut" | relative_url }}>Shut</a>
+              </li>
+            </ul>
+            <h6>
+              <a href={{ "dai/1/api/debt-market" | relative_url }}>Debt Market</a>
+            </h6>
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link" href={{ "dai/1/api/bite" | relative_url }}>Bite</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href={{ "dai/1/api/boom" | relative_url }}>Boom</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href={{ "dai/1/api/bust" | relative_url }}>Bust</a>
+              </li>
+            </ul>
+            <h6>
+              <a href={{ "dai/1/api/global-settlement" | relative_url }}>Global Settlement</a>
+            </h6>
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link" href={{ "dai/1/api/cage" | relative_url }}>Cage</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href={{ "dai/1/api/cash" | relative_url }}>Cash</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-9">
+            {{ content }}
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

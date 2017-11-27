@@ -1,12 +1,10 @@
 ---
-layout: default
+layout: dai/api
 title: Dai
-subtitle: CLI
-dai-tub: 0xf24888d405776cc56d29e70448172380708bb7a5
-dai-top: 0xf24888d405776cc56d29e70448172380708bb7a5
+subtitle: API
 ---
 
-## Cash
+## Cage
 
 Cash in `dai` balance for ETH after `cage`.
 
@@ -18,4 +16,8 @@ Cash in `dai` balance for ETH after `cage`.
   $ dai cash
 {% endcapture %}
 
-{% include tabs.html id=14 seth=seth-cli dai=dai-cli %}
+{% capture py %}
+  # not implemented
+{% endcapture %}
+
+{% include tabs.html seth=seth-cli dai=dai-cli python=py %}

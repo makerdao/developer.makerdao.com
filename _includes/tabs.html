@@ -1,20 +1,28 @@
 <ul class="nav nav-tabs" role="tablist">
   <li class="nav-item">
-    <a class="nav-link active" id="dai-{{ include.id }}-tab" data-toggle="tab" href="#dai-{{ include.id }}" role="tab" aria-controls="dai={{ include.id }}" aria-selected="false">Dai CLI</a>
+    <a class="nav-link active" id="dai-tab" data-toggle="tab" href="#dai" role="tab" aria-controls="dai" aria-selected="false">Dai CLI</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" id="seth-{{ include.id }}-tab" data-toggle="tab" href="#seth-{{ include.id }}" role="tab" aria-controls="seth={{ include.id }}" aria-selected="true">Seth</a>
+    <a class="nav-link" id="seth-tab" data-toggle="tab" href="#seth" role="tab" aria-controls="seth" aria-selected="true">Seth</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="python-tab" data-toggle="tab" href="#python" role="tab" aria-controls="python" aria-selected="true">Dai.py</a>
   </li>
 </ul>
 <div class="tab-content">
-  <div class="tab-pane fade show active" id="dai-{{ include.id }}" role="tabpanel" aria-labelledby="dai-{{ include.id }}-tab">
+  <div class="tab-pane fade show active" id="dai" role="tabpanel" aria-labelledby="dai-tab">
     {% highlight bash %}
       {{ include.dai }}
     {% endhighlight %}
   </div>
-  <div class="tab-pane fade" id="seth-{{ include.id }}" role="tabpanel" aria-labelledby="seth-{{ include.id }}-tab">
+  <div class="tab-pane fade" id="seth" role="tabpanel" aria-labelledby="seth-tab">
     {% highlight bash %}
       {{ include.seth }}
+    {% endhighlight %}
+  </div>
+  <div class="tab-pane fade" id="python" role="tabpanel" aria-labelledby="python-tab">
+    {% highlight python %}
+      {{ include.python }}
     {% endhighlight %}
   </div>
 </div>

@@ -41,6 +41,12 @@ When the system is healthy, PETH is expected to increase in value over time rela
 ## Leverage
 <p class="lead">Re-invest borrowed Dai to build leveraged positions.</p>
 
+It would be easy to write a contract that accepts ETH and gives you back a recursively leveraged CDP
+
+Making an ERC20 token containing a CDP, which would kind of be like a leveraged
+ETH token (think leveraged ETFs on NASDAQ), is something that has been
+discussed.
+
 - Basic
 - Atomic
 - Oasis Direct

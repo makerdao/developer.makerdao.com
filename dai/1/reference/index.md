@@ -1,76 +1,9 @@
 ---
 layout: default
 title: Dai
-subtitle: reference
-description: Meme reference and CLI cheatsheet
+subtitle: CLI Reference
 ---
 
-### Tokens
-
-- `gem`: underlying collateral (wrapped ether, in practice)
-- `skr`: abstracted collateral claim
-- `dai`: stablecoin
-- `sin`: anticoin, created when the system takes on debt
-
-### Core components
-
-- `vox`: target price feed
-- `tub`: CDP record store
-- `tap`: liquidation mechanism
-- `top`: global settlement facilitator
-
-### Risk parameters
-
-Configured via governance:
-
-- `way`: Sai reference price drift
-- `hat`: Debt ceiling
-- `mat`: Liquidation ratio
-- `tax`: Stability fee
-- `axe`: Liquidation penalty
-- `gap`: Join/Exit and Boom/Bust spread
-
-### CDP records
-
-The `tub` is the CDP record system.  An individual CDP is called a `cup` and has:
-
-- `lad`: an owner
-- `ink`: locked SKR collateral
-- `art`: debt
-
-### Liquidator
-
-The `tap` is a liquidator. It has three token balances that determine its allowed behaviour:
-
-- `joy`: Sai balance, surplus transferred from `drip`
-- `woe`: Sin balance, bad debt transferred from `bite`
-- `fog`: SKR balance, collateral pending liquidation
-
-### Acts
-
-- `join`: deposit `gem` in return for `skr`
-- `exit`: claim `gem` with their `skr`
-- `open`: create a new CDP
-- `give`: transfer ownership (changes `lad`)
-- `lock`: deposit SKR collateral (increases `ink`)
-- `free`: withdraw SKR collateral (decreases `ink`)
-- `draw`: create Sai (increases `art`, `rum`)
-- `wipe`: return Sai (decreases `art`, `rum`)
-- `shut`: clear all CDP debt, unlock all collateral, and delete the record
-- `bite`: liquidate CDP (zeros `art`, decreases `ink`, mints `sin` to `tap`)
-- `boom`: sell Sai in return for SKR (decreases `joy` and `woe`, decreases SKR supply)
-- `bust`: sell SKR in return for Sai (decreases `fog`, increases `joy` and `woe`, can increase SKR supply)
-
-### Prices
-
-- `per`: gem per skr
-- `par`: ref per sai
-- `tag`: ref per skr
-- `pip`: ref per gem
-- `fix`: gem per sai after `cage`
-- `fit`: ref per skr after `cage`
-
-### CLI Reference
 ```
   Read commands:
 
