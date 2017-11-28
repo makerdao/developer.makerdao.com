@@ -6,7 +6,7 @@ subtitle: API
 
 ## Shut
 
-Close a CDP.
+Close a CDP. Clear all debt, unlock all collateral and delete the record.
 
 Collateral will be used to pay any outstanding debt at market rate. Remaining
 collateral will be returned to the pool.

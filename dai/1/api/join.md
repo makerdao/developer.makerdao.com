@@ -12,6 +12,8 @@ ether).
 - The amount should be specified in units of `PETH`.
 - ETH will be debited from the caller at the join price (`ask`)
 
+![Join-Exit](https://user-images.githubusercontent.com/5028/30517891-928dd4d8-9bc1-11e7-9398-639233d851ae.png)
+
 {% capture seth-cli %}
   $ seth send "{{ site.dai-tub }}" "join(uint256)" "10.0"
 {% endcapture %}

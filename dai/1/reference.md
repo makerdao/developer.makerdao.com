@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: dai/default
 title: Dai
 subtitle: CLI Reference
 ---
