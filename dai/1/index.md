@@ -1,8 +1,6 @@
 ---
 layout: dai/default
-title: Dai
-subtitle: stable coin
-description: Distributed Autonymous Insured
+title: Dai stable coin
 ---
 
 ## Introduction

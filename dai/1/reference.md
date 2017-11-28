@@ -1,8 +1,9 @@
 ---
 layout: dai/default
-title: Dai
-subtitle: CLI Reference
+title: Dai Reference
 ---
+
+## CLI Reference
 
 ```
   Read commands:
