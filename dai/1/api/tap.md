@@ -6,7 +6,22 @@ subtitle: API
 
 ## Debt Market
 
-TODO - description & diagram
+Boom: Debt in exchange for collateral
+
+- the system sells profits in exchange for peth (claim on collateral), which it burns.
+- the value of peth relative to collateral increases
+- the supply of dai increases
+- collateral is backing more debt, reflected by the change in supply ratio to peth.
+
+Bust: Collateral in exchange for debt
+
+- the system sells collateral from underwater positions (dai) in exchange for dai, which it burns
+- where recovered collateral is insufficient it mints more, increasing the peth supply
+- value of peth relative to collateral decreases
+- the supply of dai decreases
+- less debt being backed by collateral, reflected by the change in supply ratio to peth.
+
+Both operations levy a spread - ?%
 
 #### The Liquidator
 

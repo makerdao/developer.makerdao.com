@@ -1,35 +1,22 @@
 ---
 layout: default
 title: Dai
-subtitle: arbitrage
-description: Maker platform debt market
+subtitle: use cases
 ---
 
-### Boom
+## Arbitrage
 
-Debt in exchange for collateral
+System operated debt market `tap` buys and sells Dai for PETH using external
+reference price and target price feeds.
 
-- the system sells profits in exchange for peth (claim on collateral), which it burns.
-- the value of peth relative to collateral increases
-- the supply of dai increases
-- collateral is backing more debt, reflected by the change in supply ratio to peth.
+Will create opportunity for arbitrage across other exchanges where dai, ether,
+usd is trading.
 
-### Bust
-
-Collateral in exchange for debt
-
-- the system sells collateral from underwater positions (dai) in exchange for dai, which it burns
-- where recovered collateral is insufficient it mints more, increasing the peth supply
-- value of peth relative to collateral decreases
-- the supply of dai decreases
-- less debt being backed by collateral, reflected by the change in supply ratio to peth.
-
-Both operations levy a spread - 3%, which is paid to?
 Flat order book - no slippage.
+
 Remember that ETH/USD & DAI/USD prices will also vary
 
-- Arbitrage seekers race to buy at a discount when surplus or deficit exists.
-- Sophisticated PETH holders can use bust to hedge against loss?
+Sophisticated PETH holders can use boom & bust to hedge.
 
 The system charges a stability fee on borrowed dai which it realises by selling dai in exchange for peth.
 
@@ -48,3 +35,25 @@ PETH holders sell dai at boom. Where do they get the dai? They borrow, or buy it
 - value transfer DAI -> PETH -> DAI
 
 System profits are realised to PETH holders by decreasing supply.
+
+## Borrowing
+
+Own & operate a CDP. Autonomous Dai-denominated loans by locking up ether as collateral.
+
+## Leverage
+
+It would be easy to write a contract that accepts ETH and gives you back a recursively leveraged CDP
+
+Making an ERC20 token containing a CDP, which would kind of be like a leveraged
+ETH token (think leveraged ETFs on NASDAQ), is something that has been
+discussed.
+
+- Basic
+- Atomic
+- Oasis Direct
+
+## Stability
+
+Buy dai on the open market as a shelter from volatility. Move value into dai
+during a periods of uncertainty. Regular users don't have to know about the
+advanced mechanics of Dai to take advantage of its stable value.

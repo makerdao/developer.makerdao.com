@@ -26,7 +26,7 @@ governance considers to be a safe ratio (currently 150%) so USD $100M of dai in
 circulation would for example be backed by at least USD $150M of ETH locked in
 the Maker collateral vault.
 
-### Debt/collateral ratio
+### Debt:collateral ratio
 
 The USD value of locked collateral will of course change over time. When the
 value of collateral increases, borrowers are able to create new dai (up to the
