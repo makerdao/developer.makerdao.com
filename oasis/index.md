@@ -7,13 +7,7 @@ title: Oasis
 
 TODO - discuss and define
 
-### Github
+### Front-ends
 
 * [Oasis Frontend](https://github.com/OasisDEX/oasis)
 * [Oasis Direct](https://github.com/OasisDEX/oasis-direct-base)
-* [Maker OTC - Matching Market](https://github.com/makerdao/maker-otc/blob/master/src/matching_market.sol)
-* [Maker OTC - Simple Market](https://github.com/makerdao/maker-otc/blob/master/src/simple_market.sol)
-* [Matching Market Proxy](https://github.com/makerdao/maker-otc-proxy/blob/master/src/MatchingMarketProxy.sol)
-* [Maker OTC - Dai Margin Proxy](https://github.com/makerdao/otc-dai-margin-proxy/blob/master/src/OtcDaiMarginProxy.sol)
-* [Maker OTC - Expiring Market](https://github.com/makerdao/maker-otc/blob/master/src/expiring_market.sol)
-* [Demo Python Bot](https://github.com/Riverhead/maker-market-python-example)

@@ -10,6 +10,11 @@ blockchain. Designed to maintain 1:1 parity with the US Dollar its value is
 backed by collateral (`ether` in Dai 1.0) which is locked up in a smart contract
 ,the Maker collateral vault.
 
+TODO
+
+- [Naming](https://www.reddit.com/r/MakerDAO/comments/5q98b1/%E8%B2%B8_dai/)
+- [Terminology](https://docs.google.com/document/d/1qd_GpbobfXcRBItTFcXlkFEwcxZzICPM2g4sSE5jPpI/edit)
+
 ### Dai lifecycle
 
 Dai is created by users borrowing against locked collateral and destroyed when
