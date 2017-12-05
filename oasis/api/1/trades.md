@@ -1,16 +1,16 @@
 ---
-layout: oasis/markets
+layout: oasis/api
 title: Oasis Markets API
 description: Public rest endpoints for markets data
 ---
 
-##### GET markets/abc/xyz/trades
+##### GET trades/abc/xyz/
 
 Get the list of trades for a given pair
 
 ```bash
 curl --request GET \
-  --url {{ site.apiRoot }}/markets/mkr/eth/book
+  --url {{ site.apiRoot }}/trades/mkr/eth/
 ```
 
 ```javascript
