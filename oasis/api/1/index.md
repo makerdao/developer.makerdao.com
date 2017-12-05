@@ -15,3 +15,7 @@ Notes:
 - No API key required
 - All times are UTC timestamps expressed as seconds (eg 1477409622)
 - All public endpoints use GET requests
+
+Freshness:
+
+- TODO discuss freshness?

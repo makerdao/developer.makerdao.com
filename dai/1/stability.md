@@ -8,26 +8,25 @@ title: Dai stability
 Dai 1.0 seeks to maintain stable value relative to a reference; the US Dollar.
 
 To this end, the system must ensure that the amount of Dai in circulation is at
-all times backed by at least the equivalent amount of collateral (valued in
-USD).
+all times backed by at least the equivalent USD amount of collateral.
 
 In order to achieve this:
 
 - Collateral is valued using a reference price, `ETHUSD`, (`pip`) which is
-  provided by a trusted external oracle. (link to feeds)
+  provided by a trusted [external oracle]({{ "feeds/" | relative_url }}).
 - Debt is valued at target price (`par`), which is pegged at 1 USD for Dai 1.0
 - A minimum acceptable ratio of debt to collateral (`mat`) is set via
   governance and enforced by liquidadating unsafe borrowing positions when
   nececssary.
 
 The target price is essetially what the system considers to be the USD value of
-1 Dai as it is the rate at which the value of all debt and collateral is compared.
+1 Dai and is the rate at which the value of all debt and collateral is compared.
 
 - `pip`: USD/ETH - external reference price
 - `par`: USD/DAI - target price
 
-The system enforces the target rate `par` by using it to derive DAI/ETH in all
-comparisons of debt:collateral.
+The system enforces the target price `par` by using it to derive the DAI/ETH
+ration in all comparisons of debt:collateral.
 
 #### CDP Safety
 

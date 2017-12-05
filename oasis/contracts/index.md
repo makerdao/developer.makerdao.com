@@ -14,4 +14,4 @@ directly into their own smart contracts.
 
 Familiarity with [dappsys](https://dapp.tools/dappsys) is recommended.
 
-TODO - Deployed contract addresses
+TODO - deployed contract addresses
