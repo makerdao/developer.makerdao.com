@@ -6,6 +6,8 @@ description: Public rest endpoints for markets data
 
 ##### GET trades/abc/xyz
 
+(not implemented)
+
 Get the list of trades for a given pair
 
 ```bash

@@ -4,13 +4,12 @@ title: Dai
 subtitle: API
 ---
 
-## Collateralized Debt
+### Collateralized Debt
 
 Pooled collateral can be locked up and used to borrow dai via records
 known as CDPs (Collateralized Debt Positions).
 
-
-#### CDP Record Engine
+#### Tub - a CDP Record Engine
 
 The `tub` is the CDP record system.  An individual CDP is called a `cup`
 (i.e. a small container), and has:

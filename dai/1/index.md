@@ -3,17 +3,12 @@ layout: dai/default
 title: Dai stable coin
 ---
 
-## Introduction
+### Introduction
 
 Dai 1.0 (beta) is a stable coin implemented as an ERC20 token on the Ethereum
 blockchain. Designed to maintain 1:1 parity with the US Dollar its value is
 backed by collateral (`ether` in Dai 1.0) which is locked up in a smart contract
 ,the Maker collateral vault.
-
-TODO
-
-- [Naming](https://www.reddit.com/r/MakerDAO/comments/5q98b1/%E8%B2%B8_dai/)
-- [Terminology](https://docs.google.com/document/d/1qd_GpbobfXcRBItTFcXlkFEwcxZzICPM2g4sSE5jPpI/edit)
 
 ### Dai lifecycle
 
@@ -31,7 +26,7 @@ governance considers to be a safe ratio (currently 150%) so USD $100M of dai in
 circulation would for example be backed by at least USD $150M of ETH locked in
 the Maker collateral vault.
 
-### Debt:collateral ratio
+### Debt to collateral ratio
 
 The USD value of locked collateral will of course change over time. When the
 value of collateral increases, borrowers are able to create new dai (up to the
@@ -56,6 +51,8 @@ having the opportunity to profit when the system is healthy.
 
 ### Dai Users
 
+Stable coin users.
+
 For those seeking stability, the easiest way to obtain dai is to buy it on the
 open market from cryptocurrecy exchanges. Regular users of Dai can use it as
 money without having to interact with the advanced mechanics of the Dai
@@ -65,6 +62,8 @@ other users, used as payments for goods and services, or held as long term
 savings.
 
 ### Dai Borrowers
+
+CDP users.
 
 Those seeking risk, and the opportunity for profit can borrow dai against
 locked collateral by operating a CDP (Collateralised Debt Position). A CDP is

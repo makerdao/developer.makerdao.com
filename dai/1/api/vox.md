@@ -4,7 +4,7 @@ title: Dai
 subtitle: API
 ---
 
-## Target Price Feed
+### Vox - target price feed
 
 The `vox` provides the Dai *target price*, given in terms of the reference
 unit, by `par`. For example, `par == 2` with USD as the reference unit implies

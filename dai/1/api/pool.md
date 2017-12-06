@@ -4,9 +4,9 @@ title: Dai
 subtitle: API
 ---
 
-## Collateral Pool
+### Collateral Pool
 
-`peth` is a simple proportional claim on a collateral pool, with the
+The `peth` token is a simple proportional claim on a collateral pool, with the
 initial `gem`<->`peth` exchange ratio being 1:1.
 
 The `gem`/`peth` exchange rate is called `per`, and is calculated as the

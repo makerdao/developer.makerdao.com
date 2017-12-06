@@ -3,7 +3,7 @@ layout: dai/default
 title: Dai stability
 ---
 
-## Stability
+### Stability
 
 Dai 1.0 seeks to maintain stable value relative to a reference; the US Dollar.
 
@@ -28,7 +28,7 @@ The target price is essetially what the system considers to be the USD value of
 The system enforces the target price `par` by using it to derive the DAI/ETH
 ration in all comparisons of debt:collateral.
 
-#### CDP Safety
+### CDP Safety
 
 Normal CDP operations are only possible when their collateral:debt ratio is
 above `mat` - the liquidation ratio.
@@ -43,7 +43,7 @@ By liquidating CDPs that fall below the safe ratio the system can ensure that
 the USD value of collateral backing circulating dai remains within determined
 parameters.
 
-#### Debt market
+### Debt market
 
 When buying and selling Dai via `boom` and `bust` the external reference price
 `pip` is used to value the collateral being exchanged, whilst the target price
@@ -52,7 +52,7 @@ When buying and selling Dai via `boom` and `bust` the external reference price
 Thus the quantity of dai to collateral exchanged is determined in terms of USD
 where 1 Dai = 1 USD.
 
-#### Global settlement
+### Global settlement
 
 The system can be globally settled at any time via governance by an operation
 known as `cage`. This is roughly equivilant to biting all CDP's at once,
@@ -65,10 +65,10 @@ to fix the Dai value of the collateral at the point of cage.
 Ultimately, it's the threat of global settlement which provides the incentive
 for markets to tend towards the target price of Dai.
 
-#### Target Rate Feedback Mechanism
+### Target Rate Feedback Mechanism
 
-The target price `par` is provided via an updatable price feed, `vox`. It is
-pegged to 1 USD in Dai 1.0 but could be updated via TRFM in future versions,
-allowing the target rate to be automatically adjusted in response to emerging
-market conditions. The `vox` component is subject to ongoing economic modelling
-research.
+The target price `par` is provided via an updatable price feed, [vox]({{
+"dai/1/api/vox" | relative_url }}). It is pegged to 1 USD in Dai 1.0 but could
+be updated via TRFM in future versions, allowing the target rate to be
+automatically adjusted in response to emerging market conditions. The `vox`
+component is subject to ongoing economic modelling research.

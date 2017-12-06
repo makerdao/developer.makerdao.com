@@ -5,7 +5,7 @@ subtitle: incentive-following bots
 description: Compete for profit opportunities created by the Maker system
 ---
 
-## Introduction
+### Introduction
 
 The Maker system provides various opportunities for profit which help to
 maintain market equilibrium. Strategies to arbitrage these opportunities can be
@@ -15,7 +15,7 @@ across Dai Core, Oasis and USD exchanges.
 It's expected that developers and operators will evolve their own keepers over
 time. Here are a few of our reference keepers for inspiraton:
 
-##### Bite
+### Bite
 
 CDPs that fall below the safe collateralization ratio can be liquidated by any
 external agent via an operation known as [bite]({{ "dai/1/api/bite" |
@@ -29,7 +29,7 @@ relative_url }}) and only waste gas on bite if it can make it up by subsequent
 arbitrage. For now, it's just a dumb keeper that bites any cups that become
 unsafe.
 
-##### CDP Maintenance
+### CDP Maintenance
 
 The [CDP Keeper](https://github.com/makerdao/cdp-keeper) is responsible for
 actively monitoring and managing open CDPs. In early versions it was only capable
@@ -41,13 +41,9 @@ more functionality is curently being added to allow:
 
 This keeper is still under development.
 
-##### Arbitrage
+### Arbitrage
 
 The [Arbitrage Keeper](https://github.com/makerdao/arbitrage-keeper) performs
 arbitrage on OasisDEX, `join`, `exit`, `boom` and `bust` actions. It constantly
 scans for profitable arbitrage opportunities and executes them the moment they
 become available.
-
-TODO:
- - Contributing
- - #keepers channel

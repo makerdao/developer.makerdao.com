@@ -4,7 +4,7 @@ title: Dai
 subtitle: API
 ---
 
-## Overview
+### Overview
 
 Dai 1.0 is a simplification of the Dai Stablecoin System intended for field
 testing and refining Dai components. Dai 1.0 has several features that
@@ -32,7 +32,7 @@ strongly encouraged but not required.
 
 ##### Core components
 
-- `vox`: target price feed
+- `vox`: [target price]({{ "dai/1/api/vox" | relative_url }}) feed
 - `tub`: [CDP]({{ "dai/1/api/tub" | relative_url }}) record store
 - `tap`: [liquidation mechanism]({{ "dai/1/api/tap" | relative_url }})
 - `top`: [global settlement]({{ "dai/1/api/top" | relative_url }}) facilitator

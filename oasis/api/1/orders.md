@@ -6,6 +6,8 @@ description: Public rest endpoints for markets data
 
 ##### GET orders/abc/xyz
 
+(not implemented)
+
 Get the order book for a given pair
 
 ```bash

@@ -4,15 +4,17 @@ title: Dai
 subtitle: API
 ---
 
-## Global Settlement
+### Global Settlement
 
 A key feature of Dai is the possibility of `cage`: shutting down the system
 and reimbursing Dai holders. This is provided for easy upgrades between Dai
 iterations, and for security in case of implementation flaws both in the code
 and in the design.
 
-An admin can use the `top` to `cage` the system at a specific price (dai per
-gem), or by reading the last price from the price feed.
+#### Top
+
+An admin can use the `top` contract to `cage` the system at a specific price
+(dai per gem), or by reading the last price from the price feed.
 
 First, sufficient real `gem` collateral is taken such that Dai holders can
 redeem their Dai at face value. The `gem` is moved from the `tub` to the `tap`
