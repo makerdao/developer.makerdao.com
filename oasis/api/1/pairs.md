@@ -14,15 +14,17 @@ curl --request GET \
 
 ```javascript
 200 OK
-[
+{
+  "MKR/ETH":
   {
-    "base": "MKR",   // Base
-    "quote": "ETH",  // Quote
-    "basePrecision": "18",   // Decimal base precision
-    "quotePrecision": "18",  // Decimal quote precision
-    "active":  true,       // Whether or not trading is enabled
-    "time": 1511993944   // Timestamp at which info was valid
+    "base": "MKR",          // Base
+    "quote": "ETH",         // Quote
+    "basePrecision": "18",  // Decimal base precision
+    "quotePrecision": "18", // Decimal quote precision
+    "active":  true,        // Whether or not trading is enabled
+    "time": 1511993944      // Timestamp at which info was valid
   },
+  "ETH/DAI":
   {
     "base": "ETH",
     "quote": "DAI",
@@ -32,7 +34,7 @@ curl --request GET \
     "time": 1511993944
   },
   ...
-]
+}
 ```
 
 ##### GET pairs/abc/xyz
@@ -47,12 +49,12 @@ curl --request GET \
 ```javascript
 200 OK
 {
-  "base": "MKR",   // Base
-  "quote": "ETH",  // Quote
-  "basePrecision": "18",   // Decimal base precision
-  "quotePrecision": "18",  // Decimal quote precision
-  "active":  true,       // Whether or not trading is enabled
-  "time": 1511993944   // Timestamp at which info was valid
+  "base": "MKR",          // Base
+  "quote": "ETH",         // Quote
+  "basePrecision": "18",  // Decimal base precision
+  "quotePrecision": "18", // Decimal quote precision
+  "active":  true,        // Whether or not trading is enabled
+  "time": 1511993944      // Timestamp at which info was valid
 }
 400 Bad Request
 {

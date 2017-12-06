@@ -15,13 +15,18 @@ curl --request GET \
 
 ```javascript
 200 OK
-[
+{
+  "volumes":
   {
-    "vol":  "3546.2452",   // 24h Volume
-    "time": "1511993944"   // Timestamp at which info was valid
-  },
-  ...
-]
+    "MKR/ETH":
+    {
+      "vol":  "3546.24524654"   // 24h Volume
+    },
+    ...
+  }
+  "time": 1511993944            // Timestamp at which info was valid
+
+}
 ```
 
 ##### GET volumes/abc/xyz
@@ -30,14 +35,14 @@ Retrieve volume info for a given pair
 
 ```bash
 curl --request GET \
-  --url {{ site.apiRoot }}/volumes/mkr/eth/
+  --url {{ site.apiRoot }}/volumes/mkr/eth
 ```
 
 ```javascript
 200 OK
 {
-  "vol":  "3546.2452",   // 24h Volume
-  "time": "1511993944"   // Timestamp at which info was valid
+  "vol":  "3546.24524654",      // 24h Volume
+  "time": 1511993944            // Timestamp at which info was valid
 }
 400 BAD REQUEST
 {
