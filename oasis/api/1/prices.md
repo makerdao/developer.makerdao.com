@@ -25,7 +25,7 @@ curl --request GET \
 ]
 ```
 
-##### GET prices/abc/xyz/
+##### GET prices/abc/xyz
 
 Retrieve price info for a given pair
 

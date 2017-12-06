@@ -4,7 +4,7 @@ title: Oasis Markets API
 description: Public rest endpoints for markets data
 ---
 
-##### GET orders/abc/xyz/
+##### GET orders/abc/xyz
 
 Get the order book for a given pair
 

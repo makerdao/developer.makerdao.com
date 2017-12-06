@@ -16,28 +16,26 @@ curl --request GET \
 200 OK
 [
   {
-    "pair": "MKR/ETH",     // Pair identifier
-    "baseSymbol": "MKR",   // Base
-    "quoteSymbol": "ETH",  // Quote
-    "basePrecision": 18,   // Decimal base precision
-    "quotePrecision": 18,  // Decimal quote precision
+    "base": "MKR",   // Base
+    "quote": "ETH",  // Quote
+    "basePrecision": "18",   // Decimal base precision
+    "quotePrecision": "18",  // Decimal quote precision
     "active":  true,       // Whether or not trading is enabled
-    "time": "1511993944"   // Timestamp at which info was valid
+    "time": 1511993944   // Timestamp at which info was valid
   },
   {
-    "pair": "ETH/DAI",
-    "baseSymbol": "ETH",
-    "quoteSymbol": "DAI",
-    "basePrecision": 18,
-    "quotePrecision": 18,
+    "base": "ETH",
+    "quote": "DAI",
+    "basePrecision": "18",
+    "quotePrecision": "18",
     "active":  true,
-    "time": "1511993944"
+    "time": 1511993944
   },
   ...
 ]
 ```
 
-##### GET pairs/abc/xyz/
+##### GET pairs/abc/xyz
 
 Return information for a specific pair
 
@@ -49,13 +47,12 @@ curl --request GET \
 ```javascript
 200 OK
 {
-  "pair": "MKR/ETH",     // Pair identifier
-  "baseSymbol": "MKR",   // Base
-  "quoteSymbol": "ETH",  // Quote
-  "basePrecision": 18,   // Decimal base precision
-  "quotePrecision": 18,  // Decimal quote precision
+  "base": "MKR",   // Base
+  "quote": "ETH",  // Quote
+  "basePrecision": "18",   // Decimal base precision
+  "quotePrecision": "18",  // Decimal quote precision
   "active":  true,       // Whether or not trading is enabled
-  "time": "1511993944"   // Timestamp at which info was valid
+  "time": 1511993944   // Timestamp at which info was valid
 }
 400 Bad Request
 {

@@ -24,7 +24,7 @@ curl --request GET \
 ]
 ```
 
-##### GET volumes/abc/xyz/
+##### GET volumes/abc/xyz
 
 Retrieve volume info for a given pair
 

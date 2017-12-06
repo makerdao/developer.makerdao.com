@@ -23,20 +23,23 @@ strongly encouraged but not required.
 [white paper]: https://github.com/makerdao/docs/blob/master/Dai.md
 [purple paper]: https://makerdao.com/purple
 
-Dai uses the following tokens:
+##### Tokens
 
 - `gem`: underlying collateral (ether, in practice)
 - `dai`: stablecoin
 - `peth`: abstracted collateral claim
+- `sin`: anticoin, dai mirror
 
-Dai has the following core components:
+##### Core components
 
 - `vox`: target price feed
-- `tub`: CDP record store
-- `tap`: liquidation mechanism
-- `top`: global settlement facilitator
+- `tub`: [CDP]({{ "dai/1/api/tub" | relative_url }}) record store
+- `tap`: [liquidation mechanism]({{ "dai/1/api/tap" | relative_url }})
+- `top`: [global settlement]({{ "dai/1/api/top" | relative_url }}) facilitator
 
-Dai is configured by the following 'risk parameters' (via governance):
+##### Risk parameters
+
+Configured via governance:
 
 - `way`: Dai reference price drift
 - `hat`: Debt ceiling
@@ -44,18 +47,3 @@ Dai is configured by the following 'risk parameters' (via governance):
 - `tax`: Stability fee
 - `axe`: Liquidation penalty
 - `gap`: Join/Exit and Boom/Bust spread
-
-#### Target Price Feed
-
-The `vox` provides the Dai *target price*, given in terms of the reference
-unit, by `par`. For example, `par == 2` with USD as the reference unit implies
-a target price of 2 USD per Sai.
-
-The target price can vary in time, at a rate given by `way`, which is the
-multiplicative rate of change per second.
-
-In Dai 1.0 the sensitivity, `how`, is set to zero. Adjustments to the target
-price are made by adjusting the rate of change, `way`, directly with `coax`.
-In future iterations, `how` may be non-zero and `way` adjustments will then
-follow automatically via the feedback mechanism. The `vox` component is
-subject to ongoing economic modelling research.

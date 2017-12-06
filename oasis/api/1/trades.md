@@ -4,7 +4,7 @@ title: Oasis Markets API
 description: Public rest endpoints for markets data
 ---
 
-##### GET trades/abc/xyz/
+##### GET trades/abc/xyz
 
 Get the list of trades for a given pair
 

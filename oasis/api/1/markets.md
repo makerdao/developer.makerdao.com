@@ -19,7 +19,6 @@ curl --request GET \
   {
     "pair": "MKR/ETH",     // Pair identifier
     "last": "0.82652394",  // Most recent execution price
-    "mid":  "0.82652394",  // (bid + ask) / 2
     "vol":  "3546.2452",   // 24h Volume
     "ask":  "0.87200000",  // Innermost ask
     "bid":  "0.82000000",  // Innermost bid
@@ -31,7 +30,7 @@ curl --request GET \
 ]
 ```
 
-##### GET markets/abc/xyz/
+##### GET markets/abc/xyz
 
 High level overview of the state of a particular market.
 
