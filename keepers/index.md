@@ -47,3 +47,15 @@ The [Arbitrage Keeper](https://github.com/makerdao/arbitrage-keeper) performs
 arbitrage on OasisDEX, `join`, `exit`, `boom` and `bust` actions. It constantly
 scans for profitable arbitrage opportunities and executes them the moment they
 become available.
+
+### Market Makers
+
+Market making keepers for OasisDEX, EtherDelta and RadarRelay.
+
+[Market Makers](https://github.com/makerdao/market-maker-keeper) is a set of
+keepers that facilitate DAI/W-ETH and DAI/ETH market making on the following
+exchanges:
+
+* OasisDEX
+* EtherDelta
+* RadarRelay

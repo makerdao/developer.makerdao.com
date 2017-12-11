@@ -18,4 +18,5 @@ Notes:
 
 Freshness:
 
-- TODO discuss freshness?
+- Responses may be cached and shoult not be treated as live. Timestamps
+  indicate the exact time at which the data should be considered valid.

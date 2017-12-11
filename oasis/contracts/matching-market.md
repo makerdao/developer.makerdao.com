@@ -5,7 +5,7 @@ title: Oasis Contracts
 
 ### Matching Market
 
-Inherits from Simple Market. Shares the same liquidity pool. Used a sorted list
+Inherits from Simple Market. Shares the same liquidity pool. Uses` a sorted list
 to facilitate order matching.
 
 * [matching-market.sol](https://github.com/makerdao/maker-otc/blob/master/src/matching_market.sol)
