@@ -24,14 +24,6 @@ Example:
 
 [Learn more]({{ "dai/1/" | relative_url }})
 
-## Earn
-<p class="lead">Pool collateral and earn a return.</p>
-
-When the system is healthy, PETH is expected to increase in value over time
-relative to ETH, providing a return to collateral holders.
-
-[Learn more]({{ "dai/1/api/pool" | relative_url }})
-
 ## Arbitrage
 <p class="lead">Compete for profit opportunities provided by the Maker platform.</p>
 

@@ -25,5 +25,4 @@ to rise proportional to pooled collateral.
 ![Join-Exit](https://user-images.githubusercontent.com/5028/30517891-928dd4d8-9bc1-11e7-9398-639233d851ae.png)
 
 If `PETH` has to be issued to cover forced liquidations the value of the claim
-can also fall during times of volatility.  Over time a well managed system is
-expected to accumulate surplus which will be earned by `PETH` holders.
+can also fall during times of volatility.
