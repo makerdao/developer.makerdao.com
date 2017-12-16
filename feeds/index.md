@@ -9,7 +9,7 @@ description: Exteral reference prices for the Maker platform
 
 The reference price (ETHUSD) for the Maker system is provided via an oracle
 (the `medianizer`), which collates price data from a number of external price
-feeds.
+[feeds](https://makerdao.com/feeds/).
 
 #### Price Feeds
 
