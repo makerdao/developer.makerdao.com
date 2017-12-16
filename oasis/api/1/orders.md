@@ -18,19 +18,34 @@ curl --request GET \
 ```javascript
 200 OK
 {
-  "bids":[{
-    "price":  "574.61",
-    "amount": "0.1439327",
-    "time":   "1511993944"
-  }],
-  "asks":[{
-    "price":  "574.62",
-    "amount": "19.1334",
-    "time":   "1511993944"
-  }]
+  "data":
+  { 
+    "bids":
+    [
+      {
+        "price":  "574.61",       // Offer price for base token denominated in quote token
+        "amount": "0.1439327",    // Amount of base token
+        "time":   "1511993944"    // Unix timestamp at which info was valid
+      },
+      ...
+    ],
+    "asks":
+    [
+      {
+        "price":  "574.62",       // Offer price for base token denominated in quote token
+        "amount": "19.1334",      // Amount of base token
+        "time":   "1511993944"    // Unix timestamp at which info was valid
+      },
+      ...
+    ]
+  },
+  "time": "1511993944",           // Unix timestamp at which info was valid
+  "message": "success"            // Status message
 }
 400 BAD REQUEST
 {
+  "data": {},
+  "time": "1511993944",
   "message": "Unknown pair"
 }
 ```

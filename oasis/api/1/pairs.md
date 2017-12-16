@@ -15,25 +15,28 @@ curl --request GET \
 ```javascript
 200 OK
 {
-  "MKR/ETH":
+  "data": 
   {
-    "base": "MKR",          // Base
-    "quote": "ETH",         // Quote
-    "basePrecision": "18",  // Decimal base precision
-    "quotePrecision": "18", // Decimal quote precision
-    "active":  true,        // Whether or not trading is enabled
-    "time": 1511993944      // Timestamp at which info was valid
+    "MKR/ETH":
+    {
+      "base": "MKR",          // Base
+      "quote": "ETH",         // Quote
+      "basePrecision": "18",  // Decimal base precision
+      "quotePrecision": "18", // Decimal quote precision
+      "active":  true,        // Whether or not trading is enabled
+    },
+    "ETH/DAI":
+    {
+      "base": "ETH",
+      "quote": "DAI",
+      "basePrecision": "18",
+      "quotePrecision": "18",
+      "active":  true,
+    },
+    ...
   },
-  "ETH/DAI":
-  {
-    "base": "ETH",
-    "quote": "DAI",
-    "basePrecision": "18",
-    "quotePrecision": "18",
-    "active":  true,
-    "time": 1511993944
-  },
-  ...
+  "time": 1513379816,         // Unix timestamp at which info was valid
+  "message": "success"        // Status message
 }
 ```
 
@@ -49,15 +52,21 @@ curl --request GET \
 ```javascript
 200 OK
 {
-  "base": "MKR",          // Base
-  "quote": "ETH",         // Quote
-  "basePrecision": "18",  // Decimal base precision
-  "quotePrecision": "18", // Decimal quote precision
-  "active":  true,        // Whether or not trading is enabled
-  "time": 1511993944      // Timestamp at which info was valid
+  "data":
+  {
+    "base": "MKR",          // Base
+    "quote": "ETH",         // Quote
+    "basePrecision": "18",  // Decimal base precision
+    "quotePrecision": "18", // Decimal quote precision
+    "active":  true,        // Whether or not trading is enabled
+  },
+  "time": 1513379816,       // Unix timestamp at which info was valid
+  "message": "success"      // Status message
 }
 400 Bad Request
 {
+  "data": {},
+  "time": 1513379816,
   "message": "Unknown pair"
 }
 ```

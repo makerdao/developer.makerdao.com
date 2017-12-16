@@ -15,23 +15,36 @@ curl --request GET \
 
 ```javascript
 200 OK
-[{
-  "price": "0.92000000",            //price trade was executed at
-  "buyToken": "MKR",		    //token bought
-  "payToken": "ETH",		    //token paid
-  "buyAmount": "0.75515217",	    //amount of token bought
-  "payAmount": "0.69474000",	    //amount of token paid
-  "type": "SELL",		    //type of trade
-  "time": "1513115304"		    //unix timestamp when trade was executed
-}]
+{
+  "data":
+  {
+    [
+      {
+        "price": "0.92000000",            // Price trade was executed at
+        "buyToken": "MKR",		            // Token bought
+        "payToken": "ETH",		            // Token paid
+        "buyAmount": "0.75515217",	      // Amount of token bought
+        "payAmount": "0.69474000",	      // Amount of token paid
+        "type": "SELL",		                // Type of trade
+        "time": "1513115304"		          // Unix timestamp when trade was executed
+      },
+      ...
+    ]
+  },
+  "time": 1513382496,                     // Unix timestamp at which info was valid
+  "message": "success"                    // Status message
 
 200 OK
 {
-  "message": "No recent trade history"
+  "data": {},
+  "time": 1513382496,                     // Unix timestamp at which info was valid
+  "message": "No recent trade history"    // Status message
 }
 
 400 BAD REQUEST
 {
+  "data": {},
+  "time": 1513382496,
   "message": "Unknown pair"
 }
 ```

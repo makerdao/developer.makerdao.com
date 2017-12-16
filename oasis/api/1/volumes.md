@@ -16,16 +16,16 @@ curl --request GET \
 ```javascript
 200 OK
 {
-  "volumes":
+  "data":
   {
-    "MKR/ETH":
+    "MKR/ETH":                   //Token Pair
     {
-      "vol":  "3546.24524654"   // 24h Volume
+      "vol":  "3546.24524654"    // 24h Volume
     },
     ...
-  }
-  "time": 1511993944            // Timestamp at which info was valid
-
+  },
+  "time": 1511993944,            // Unix timestamp at which info was valid
+  "message": "success"           // Satus message
 }
 ```
 
@@ -41,11 +41,17 @@ curl --request GET \
 ```javascript
 200 OK
 {
-  "vol":  "3546.24524654",      // 24h Volume
-  "time": 1511993944            // Timestamp at which info was valid
+  "data":
+  {
+    "vol":  "3546.24524654"      // 24h Volume
+  },
+  "time": 1511993944,            // Unix timestamp at which info was valid
+  "message": "success"           // Status message
 }
 400 BAD REQUEST
 {
-  "message": "Unknown pair"
+  "data": {},
+  "time":  1511993944,           
+  "message": "Unknown pair"      
 }
 ```
