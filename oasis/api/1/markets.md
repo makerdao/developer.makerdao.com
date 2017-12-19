@@ -21,7 +21,7 @@ curl --request GET \
     "MKR/ETH":
     {
       "pair": "MKR/ETH",     // Pair identifier
-      "price":"0.84157326",  // 24h Volume weighted price 
+      "price":"0.84157326",  // 6h Volume weighted price 
       "last": "0.82652394",  // Most recent execution price
       "vol":  "3546.2452",   // 24h Volume
       "ask":  "0.87200000",  // Innermost ask
@@ -52,7 +52,7 @@ curl --request GET \
   "data":
   {
     "pair": "MKR/ETH",     // Pair identifier
-    "price":"0.84157326",  // 24h Volume weighted price
+    "price":"0.84157326",  // 6h Volume weighted price
     "last": "0.82652394",  // Most recent execution price
     "vol":  "3546.2452",   // 24h Volume
     "ask":  "0.87200000",  // Innermost ask

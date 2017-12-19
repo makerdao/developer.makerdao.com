@@ -2,7 +2,7 @@
 layout: oasis/api
 title: Oasis Markets API
 description: Public rest endpoints for markets data
----
+
 
 ##### GET trades/abc/xyz
 
@@ -21,12 +21,12 @@ curl --request GET \
     [
       {
         "price": "0.92000000",            // Price trade was executed at
-        "buyToken": "MKR",		            // Token bought
-        "payToken": "ETH",		            // Token paid
-        "buyAmount": "0.75515217",	      // Amount of token bought
-        "payAmount": "0.69474000",	      // Amount of token paid
-        "type": "SELL",		                // Type of trade
-        "time": "1513115304"		          // Unix timestamp when trade was executed
+        "buyToken": "MKR",                // Token bought
+        "payToken": "ETH",                // Token paid
+        "buyAmount": "0.75515217",        // Amount of token bought
+        "payAmount": "0.69474000",        // Amount of token paid
+        "type": "SELL",                   // Type of trade
+        "time": "1513115304"              // Unix timestamp when trade was executed
       },
       ...
     ]
