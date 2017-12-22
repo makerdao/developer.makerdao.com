@@ -42,7 +42,7 @@ strongly encouraged but not required.
 Configured via governance:
 
 - `way`: Dai reference price drift
-- `hat`: Debt ceiling
+- `cap`: Debt ceiling
 - `mat`: Liquidation ratio
 - `tax`: Stability fee
 - `axe`: Liquidation penalty

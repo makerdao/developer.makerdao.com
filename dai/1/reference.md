@@ -19,7 +19,7 @@ title: Dai Reference
    fog             get the amount of skr pending liquidation
    gem             get the collateral token
    gov             get the governance token
-   hat             get the debt ceiling
+   cap             get the debt ceiling
    ice             get the good debt
    ink             get the amount of skr collateral locked in a cup
    joy             get the amount of surplus sai
