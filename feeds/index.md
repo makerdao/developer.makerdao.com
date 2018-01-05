@@ -51,7 +51,7 @@ the medianized price.
 
 The [medianizer] is the smart contract which provides Makers trusted reference price.
 
-[medianizer]: https://etherscan.io/address/0x729D19f657BD0614b4985Cf1D82531c67569197B)
+[medianizer]: https://etherscan.io/address/0x729D19f657BD0614b4985Cf1D82531c67569197B
 
 It maintains a whitelist of price feed contracts which are allowed to post
 price updates and a record of recent prices supplied by each address. Every
