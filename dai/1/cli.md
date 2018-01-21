@@ -64,6 +64,33 @@ or access the Dai deployment on the Kovan testnet:
 
     dai --chain kovan status
 
+#### Example usage
+
+```
+# Set CDP owner wallet
+export ETH_FROM=0x1111111111111111111111111111111111111111
+
+$ dai -C ethlive open
+Opening cup...
+Waiting for transaction receipt...
+Opened cup 7
+
+export SETH_CHAIN=ethlive
+
+$ dai --cup 7 lock 10.0
+
+$ dai --cup 7 draw 500.0
+
+$ dai --cup 7 cup
+cup id 7...
+lad: 0x1111111111111111111111111111111111111111
+ink: 10.00000000000000000
+tab: 500.00000000000000000
+rap: 0.013002546907931440
+
+$ dai help
+```
+
 #### Read commands
 
 Public accessible dai system and cup info.
@@ -116,6 +143,8 @@ dai  vox             get the target price engine
 dai  wad             parse and display a 18-decimal fixed-point number
 dai  way             get the holder fee (interest rate)
 dai  woe             get the amount of bad debt
+
+dai  help            print help about dai(1) or one of its subcommands
 ```
 
 #### Actions
@@ -137,7 +166,6 @@ dai exit            sell PETH for gems
 dai free            remove excess PETH collateral from a cup
 dai give            transfer ownership of a cup
 dai heal            cancel debt
-dai help            print help about dai(1) or one of its subcommands
 dai join            buy PETH for gems
 dai lock            post additional PETH collateral to a cup
 dai open            create a new cup (collateralized debt position)
