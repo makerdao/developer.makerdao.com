@@ -16,10 +16,10 @@ In order to achieve this:
   provided by a trusted [external oracle]({{ "feeds/" | relative_url }}).
 - Debt is valued at target price (`par`), which is pegged at 1 USD for Dai 1.0
 - A minimum acceptable ratio of debt to collateral (`mat`) is set via
-  governance and enforced by liquidadating unsafe borrowing positions when
-  nececssary.
+  governance and enforced by liquidating unsafe borrowing positions when
+  necessary.
 
-The target price is essetially what the system considers to be the USD value of
+The target price is essentially what the system considers to be the USD value of
 1 Dai and is the rate at which the value of all debt and collateral is compared.
 
 - `pip`: USD/ETH - external reference price
@@ -33,11 +33,11 @@ ration in all comparisons of debt:collateral.
 Normal CDP operations are only possible when their collateral:debt ratio is
 above `mat` - the liquidation ratio.
 
-When checking CDP safety the external reference price `pip` is used in order to
+When checking CDP safety, the external reference price `pip` is used in order to
 establish the USD value of the collateral, whilst the target price `par` is
-used to price the oustanding debt.
+used to price the outsanding debt.
 
-Thus CDP safety is assesed in USD terms at target price 1 DAI = 1 USD.
+Thus, CDP safety is assessed in USD terms at target price 1 DAI = 1 USD.
 
 By liquidating CDPs that fall below the safe ratio the system can ensure that
 the USD value of collateral backing circulating dai remains within determined
@@ -55,7 +55,7 @@ where 1 Dai = 1 USD.
 ### Global settlement
 
 The system can be globally settled at any time via governance by an operation
-known as `cage`. This is roughly equivilant to biting all CDP's at once,
+known as `cage`. This is roughly equivalent to biting all CDP's at once,
 locking the system, and allowing all circulating dai to be exchanged for
 collateral at the cage price.
 

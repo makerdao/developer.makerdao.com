@@ -13,7 +13,7 @@ Oasis is a liquidity pool on the Ethereum blockchain. The Simple Market and
 Matching Market smart contracts provide for the trustless atomic exchange of
 ERC20 tokens without third party counter-risk.
 
-##### OasisDEX
+##### OasisDex
 
 The market can be accessed via solidity, web3, python, with a
 [front-end](https://github.com/OasisDEX/oasis) available at

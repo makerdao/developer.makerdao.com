@@ -16,7 +16,7 @@ Dai is created by users borrowing against locked collateral and destroyed when
 loans are repaid.
 
 1. Anyone can create new `dai` by depositing `ether` as collateral and drawing
-   off an appropriate amount of dai.
+   an appropriate amount of dai.
 2. Locked collateral can be recovered at any time by paying back the borrowed
    `dai` (plus a stability fee).
 
@@ -32,21 +32,21 @@ The USD value of locked collateral will of course change over time. When the
 value of collateral increases, borrowers are able to create new dai (up to the
 safe ratio). When the USD value of collateral falls, borrowers can choose to
 either repay borrowed dai, or deposit more collateral, as their position
-approaches the liqudation ratio. Borrowers who allow their positions to fall
+approaches the liquidation ratio. Borrowers who allow their positions to fall
 below the safe ratio risk forced liquidation.
 
 Forced liquidation is Makers way of ensuring that the amount of collateral
 backing circulating `dai` remains within safe parameters. Positions that fall
 below the liquidation ratio can have their backing collateral seized and sold on
 the Maker debt market for dai, which is then removed from circulation. In cases
-of extreme volitility where the value of seized collateral may be insufficient
+of extreme volatility where the value of seized collateral may be insufficient
 to cover the outstanding debt, the supply of collateral wrapper tokens is
 expanded to cover any shortfall.
 
 Note: Collateral holders can see their claim on the pool fall in value in
-situations where the system has to cover any forced liquidations with a
-negative debt ratio. Collateral holders in Dai 1.0 therefore carry the
-responsability of backing the system through periods of volatility as well as
+situations where the system must cover any forced liquidations with a
+negative debt ratio. Collateral holders in Dai 1.0, therefore, carry the
+responsibility of backing the system through periods of volatility as well as
 having the opportunity to profit when the system is healthy.
 
 ### Dai Users
@@ -54,7 +54,7 @@ having the opportunity to profit when the system is healthy.
 Stable coin users.
 
 For those seeking stability, the easiest way to obtain dai is to buy it on the
-open market from cryptocurrecy exchanges. Regular users of Dai can use it as
+open market from cryptocurrency exchanges. Regular users of Dai can use it as
 money without having to interact with the advanced mechanics of the Dai
 Stablecoin System. From their point of view, Dai is just another cryptocurrency
 obtained from a cryptocurrency exchange or broker, that can be freely sent to
@@ -67,6 +67,6 @@ CDP users.
 
 Those seeking risk, and the opportunity for profit can borrow dai against
 locked collateral by operating a CDP (Collateralised Debt Position). A CDP is
-simply lightweight record which tracks a particular borrowing position - the
+simply a lightweight record which tracks a particular borrowing position - the
 owner of the position, the amount of locked collateral, and the amount of
 dai which has been issued.
