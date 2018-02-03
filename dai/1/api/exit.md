@@ -1,7 +1,7 @@
 ---
 layout: dai/api
-title: Dai
-subtitle: API
+title: Dai 1.0
+subtitle: API - Exit
 ---
 
 ## Exit
@@ -16,7 +16,7 @@ Will return more or less `ETH` tokens for each `PETH` than at `join` depending
 whether the system made a profit or loss over the lifetime of the collateral
 deposited to the pool.
 
-![Join-Exit](https://user-images.githubusercontent.com/5028/30517891-928dd4d8-9bc1-11e7-9398-639233d851ae.png)
+![Join-Exit](https://user-images.githubusercontent.com/5028/35772451-cba0bb78-09a3-11e8-8f8e-fc8d6ecbad3e.png)
 
 {% capture seth-cli %}
   $ seth send "{{ site.dai-tub }}" "exit(uint256)" "10.0"
