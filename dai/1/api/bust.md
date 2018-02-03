@@ -1,7 +1,7 @@
 ---
 layout: dai/api
-title: Dai
-subtitle: API
+title: Dai 1.0
+subtitle: API - Bust
 ---
 
 ## Bust
@@ -15,7 +15,7 @@ return for Dai, which is used to cancel out the bad debt, `woe`. If
 and sold in return for Dai, up to the point that the net Sin balance is
 zero.
 
-![Bust](https://user-images.githubusercontent.com/5028/30517888-9287dd76-9bc1-11e7-8726-6b21843e27a5.png)
+![Bust](https://user-images.githubusercontent.com/5028/35772382-2587365a-09a2-11e8-8bde-57787d494236.png)
 
 {% capture seth-cli %}
   $ seth send "{{ site.dai-tub }}" "bust(uint256)" "<amount-in-skr>"
