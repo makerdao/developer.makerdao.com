@@ -1,14 +1,14 @@
 ---
 layout: dai/api
-title: Dai
-subtitle: API
+title: Dai 1.0
+subtitle: API - Free
 ---
 
 ## Free
 
 Remove `PETH` collateral (decreases `ink`).
 
-![Free](https://user-images.githubusercontent.com/5028/30517892-928e06ec-9bc1-11e7-91e8-6ae6caae8585.png)
+![Free](https://user-images.githubusercontent.com/5028/35772482-61a6330a-09a4-11e8-94e1-910253b5a5a1.png)
 
 {% capture seth-cli %}
   $ seth send "{{ site.dai-tub }}" "free(bytes32,uint256)" "<cup-id>" "<amount-in-skr>"
