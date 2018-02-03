@@ -1,7 +1,7 @@
 ---
 layout: dai/api
-title: Dai
-subtitle: API
+title: Dai 1.0
+subtitle: API - Bite
 ---
 
 ## Bite
@@ -18,7 +18,7 @@ There are other possible implementations of `bite`, e.g. only taking
 sufficient collateral to just transition the CDP to safe, but the
 described implementation is chosen for simplicity.
 
-![Bite](https://user-images.githubusercontent.com/5028/30519068-6c871ed2-9be1-11e7-83df-3cbda6a49e3b.png)
+![Bite](https://user-images.githubusercontent.com/5028/35772731-354e9e9c-09a8-11e8-8800-a63892ff806d.png)
 
 {% capture seth-cli %}
   $ seth send "{{ site.dai-tub }}" "bite(bytes32)" "<cup-id>"

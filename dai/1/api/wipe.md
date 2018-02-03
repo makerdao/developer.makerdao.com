@@ -1,14 +1,14 @@
 ---
 layout: dai/api
-title: Dai
-subtitle: API
+title: Dai 1.0
+subtitle: API - Wipe
 ---
 
 ## Wipe
 
 Repay some portion of oustanding Dai debt (decreases `art`, `rum`).
 
-![Wipe](https://user-images.githubusercontent.com/5028/30463893-97a6aef4-9a22-11e7-9a65-3055ad05b8d6.png)
+![Wipe](https://user-images.githubusercontent.com/5028/35772639-a8391ad2-09a7-11e8-9230-2528d3e3a804.png)
 
 {% capture seth-cli %}
   $ seth send "{{ site.dai-tub }}" "wipe(bytes32,uint)" "<cup-id>" "<amount-in-dai>"

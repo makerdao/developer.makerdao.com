@@ -23,8 +23,9 @@ itself:
 
 Then add DappHub's distribution channel and install `dai`:
 
-    $ nix-channel --add https://nix.dapphub.com/pkgs/dapphub $ nix-channel
-    --update $ nix-env -iA dapphub.dai
+    $ nix-channel --add https://nix.dapphub.com/pkgs/dapphub
+    $ nix-channel --update
+    $ nix-env -iA dapphub.dai
 
 See [dapp.tools](https://dapp.tools) for more software available through our
 channel.

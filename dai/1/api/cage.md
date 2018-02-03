@@ -1,14 +1,14 @@
 ---
 layout: dai/api
-title: Dai
-subtitle: API
+title: Dai 1.0
+subtitle: API - Cage
 ---
 
 ## Cage
 
 Lock the system and initiate settlement.
 
-![Cage](https://user-images.githubusercontent.com/5028/30519069-6c9ae656-9be1-11e7-9e3f-e75f585024f7.png)
+![Cage](https://user-images.githubusercontent.com/5028/35772757-52fe000e-09a8-11e8-81da-edb5406fe43c.png)
 
 {% capture seth-cli %}
   $ seth send "{{ site.dai-top }}" "cage(uint256)" "<final-price>"
