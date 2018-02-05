@@ -1,7 +1,6 @@
 ---
 layout: oasis/api
-title: Oasis Markets API
-description: Public rest endpoints for markets data
+title: Oasis API - Volumes
 ---
 
 ##### GET volumes/
@@ -51,7 +50,7 @@ curl --request GET \
 400 BAD REQUEST
 {
   "data": {},
-  "time":  1511993944,           
-  "message": "Unknown pair"      
+  "time":  1511993944,
+  "message": "Unknown pair"
 }
 ```

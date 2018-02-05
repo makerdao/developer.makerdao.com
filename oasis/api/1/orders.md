@@ -1,7 +1,6 @@
 ---
 layout: oasis/api
-title: Oasis Markets API
-description: Public rest endpoints for markets data
+title: Oasis API - Orders
 ---
 
 ##### GET orders/abc/xyz
@@ -19,7 +18,7 @@ curl --request GET \
 200 OK
 {
   "data":
-  { 
+  {
     "bids":
     [
       {

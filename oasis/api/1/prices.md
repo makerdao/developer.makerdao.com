@@ -1,7 +1,6 @@
 ---
 layout: oasis/api
-title: Oasis Markets API
-description: Public rest endpoints for markets data
+title: Oasis API - Prices
 ---
 
 ##### GET prices/

@@ -1,6 +1,6 @@
 ---
 layout: oasis/api
-title: Oasis Markets API - List
+title: Oasis API - Pairs
 ---
 
 ##### GET pairs/
@@ -15,7 +15,7 @@ curl --request GET \
 ```javascript
 200 OK
 {
-  "data": 
+  "data":
   {
     "MKR/ETH":
     {
