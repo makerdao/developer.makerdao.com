@@ -22,7 +22,7 @@ zero.
 {% endcapture %}
 
 {% capture dai-cli %}
-  $ dai boom <amount-in-skr>
+  $ dai bust <amount-in-skr>
 {% endcapture %}
 
 {% capture py %}
