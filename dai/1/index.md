@@ -7,8 +7,15 @@ title: Dai stable coin
 
 Dai 1.0 (beta) is a stable coin implemented as an ERC20 token on the Ethereum
 blockchain. Designed to maintain 1:1 parity with the US Dollar its value is
-backed by collateral (`ether` in Dai 1.0) which is locked up in a smart contract
-,the Maker collateral vault.
+backed by collateral (`ether` in Dai 1.0) which is locked up in a smart
+contract, the Maker collateral vault.
+
+Dai has adopted the unicode diamond as its symbolic representation:
+
+◈ 100 dai
+
+The name Dai is derived from the chinese character 貸, meaning _to lend or
+provide capital for a loan_ - learn more about the rational behind the name [here](https://www.reddit.com/r/MakerDAO/comments/5q98b1/貸_dai/).
 
 ### Dai lifecycle
 
