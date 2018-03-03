@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+    {% include nav.html %}
+    <section class="jumbotron jumbotron-fluid">
+      <div class="container">
+        {% include dai/nav.html %}
+      </div>
+    </section>
+    <section class="pt-5 pb-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-3 side-panel">
+            <h5>API</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link" href={{ "dai/1/graphql/" | relative_url }}>Intro</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href={{ "dai/1/graphql/queries" | relative_url }}>Queries</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href={{ "dai/1/graphql/filters" | relative_url }}>Filters</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href={{ "dai/1/graphql/types" | relative_url }}>Types</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-sm-9 api-content">
+            {{ content }}
+          </div>
+        </div>
+      </div>
+    </section>
+    {% include footer.html %}
+  </body>
+</html>
