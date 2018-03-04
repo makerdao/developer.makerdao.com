@@ -4,29 +4,28 @@ title: Dai
 subtitle: GraphQL
 ---
 
-#### GraphQL
+### GraphQL
 
 GraphQL is a query language for APIs and a runtime for fulfilling those
 queries. It provides a complete and understandable description of the
 available data, and gives clients the power to ask for exactly what they need
 and nothing more.
 
-API Status: Unstable
+![]({{ "images/graphql.png" | relative_url }})
 
-Query IDE available at:
+##### Query IDE
 
-- Current: [dai-ql.herokuapp.com/v1/console](https://dai-ql.herokuapp.com/console)
+A graphical interactive in-browser GraphQL IDE:
 
-- Proposed: [graphql.makerdao.com/v1/console](https://dai-ql.herokuapp.com/console)
+Current - [dai-ql.herokuapp.com/console](https://dai-ql.herokuapp.com/console)
 
+Proposed - graphql.makerdao.com/v1/console
 
-Dai 1.0 Query Endpoint:
+##### Query Endpoint
 
-- Current: [dai-ql.herokuapp.com/](https://dai-ql.herokuapp.com/)
+Current - [dai-ql.herokuapp.com/](https://dai-ql.herokuapp.com/)
 
-- Proposed: [graphql.makerdao.com/v1/](https://dai-ql.herokuapp.com/)
-
-Example:
+Proposed - graphql.makerdao.com/v1/
 
 ```bash
 $ curl -XPOST  \
@@ -44,10 +43,10 @@ $ curl -XPOST  \
   }
 ```
 
-Libraries:
+##### Libraries
 
 [graphql.org/code/](http://graphql.org/code/)
 
-[Appolo Client](https://www.apollographql.com/client)
+[Apollo Client](https://www.apollographql.com/client)
 
 [Relay](https://facebook.github.io/relay/docs/en/introduction-to-relay.html)
