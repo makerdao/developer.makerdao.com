@@ -37,10 +37,34 @@ $ curl -XPOST  \
   }
 ```
 
-##### Libraries
+##### Client Libraries
 
-[graphql.org/code/](http://graphql.org/code/)
+Golang
 
-[Apollo Client](https://www.apollographql.com/client)
+- [graphql](https://github.com/shurcooL/graphql#readme)
 
-[Relay](https://facebook.github.io/relay/docs/en/introduction-to-relay.html)
+Javascript
+
+- [Apollo](https://www.apollographql.com/client)
+
+- [Relay](https://facebook.github.io/relay/docs/en/introduction-to-relay.html)
+
+- [GraphQL Request](https://github.com/graphcool/graphql-request)
+
+- [Lokka](https://github.com/kadirahq/lokka)
+
+- [Nano](https://github.com/yoshuawuyts/nanogql)
+
+iOS
+
+- [Apollo iOS](https://www.apollographql.com/docs/ios/)
+
+- [GraphQL iOS](https://github.com/funcompany/graphql-ios)
+
+Python
+
+- [GQL](https://github.com/graphql-python/gql)
+
+Others
+
+- [graphql.org/code](http://graphql.org/code/#graphql-clients)
