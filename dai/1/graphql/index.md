@@ -11,21 +11,15 @@ queries. It provides a complete and understandable description of the
 available data, and gives clients the power to ask for exactly what they need
 and nothing more.
 
+##### Console
+
+Explore the API via the interactive [in-browser IDE](https://dai-ql.herokuapp.com/console):
+
 ![]({{ "images/graphql.png" | relative_url }})
-
-##### Query IDE
-
-A graphical interactive in-browser GraphQL IDE:
-
-Current - [dai-ql.herokuapp.com/console](https://dai-ql.herokuapp.com/console)
-
-Proposed - graphql.makerdao.com/v1/console
 
 ##### Query Endpoint
 
-Current - [dai-ql.herokuapp.com/](https://dai-ql.herokuapp.com/)
-
-Proposed - graphql.makerdao.com/v1/
+Interact with the API programatically via: [graphql.makerdao.com](https://dai-ql.herokuapp.com/)
 
 ```bash
 $ curl -XPOST  \

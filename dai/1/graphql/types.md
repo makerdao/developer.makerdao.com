@@ -10,52 +10,44 @@ GraphQL Schema Definition
 
 ```graphql
 type Cup {
-  # owner
-  lad: String!
-
-  # collateral
-  ink: String!
-
-  # debt
-  art: String!
-  tab: String!
-
-  # fee
-  ire: String!
-  rap: String!
-
-  # timestamps
-  created: Block!
-  createdTimestamp: DateTime!
-  updated: Block!
-  updatedTimestamp: DateTime!
-
-  state: CupState!
-
-  events: [Event!]
-
-  # ???
-  # Collateralization Ratio
-
-  # ???
-  # Liquidation Price
+  act: Act!            # Most recent cup action
+  art: BigFloat!       # Outstanding debt DAI
+  block: Int!          # Block at most recent action
+  id: Int!             # Unique Cup Id
+  ink: BigFloat!       # Collateral PETH
+  ire: BigFloat!       # Collateral less fee
+  lad: String!         # Cup owner
+  pip: BigFloat!       # Current USD/ETH price
+  ratio: BigFloat      # Current collateralisation ratio
+  tab: BigFloat        # Collateral USD
+  time: Datetime!      # Timestamp of most recent action
+  history: [CupAct!]   # Cup actions
 }
 
-type Price {
-  base: Symbol!,
-  quote: Symbol!,
-  price: Float!,
-  block: Block!
+type CupAct {
+  act: Act!            # Action name
+  arg: String!         # Action argument
+  art: BigFloat!       # Debt DAI at block
+  block: Int!          # Block number
+  id: Int!             # Cup Id
+  ink: BigFloat!       # Collateral PETH at block
+  lad: String!         # Cup owner
+  pip: BigFloat!       # USD/ETH price at block
+  ratio: BigFloat      # Collateralisation ratio at block
+  tab: BigFloat        # Collateral USD at block
+  time: Datetime!      # Block timestamp
+  tx: String           # Transaction hash
 }
 
-type CupAction {
-  action: Action!,
-  created: Block!
-  createdTimestamp: DateTime!,
-  sender: Address!,
-  cupID: Int,
-  data: String,
-  txHash: String
+enum Acts {
+  OPEN
+  GIVE
+  LOCK
+  FREE
+  DRAW
+  WIPE
+  SHUT
+  BITE
 }
 
 type Query {
@@ -64,10 +56,8 @@ type Query {
   #
   # Arguments
   # id: The cup ID.
-  # block: Optionally specify a block height
   getCup(
     id: Int!,
-    block: Block
   ): Cup
 
   # Perform a search across cups
@@ -79,22 +69,11 @@ type Query {
   # specified cup ID.
   # after: Returns the elements in the list that come after the
   # specified cup ID.
-  # beforeBlock: Returns the elements in the list that come before the
-  # specified block height.
-  # after: Returns the elements in the list that come after the
-  # specified block height.
-  # lad: Returns cups belonging to the specified address
-  # block: Block height
-  # states: Return cups with states in the specified list
   allCups(
     first: Int,
     last: Int,
     before: Int,
-    after: Int,
-    beforeBlock: Block,
-    afterBlock: Block,
-    lad: Address
-    states: [String]
+    after: Int
   ): [Cup]
 
   # Perform a search across cup actions
@@ -104,74 +83,11 @@ type Query {
   # last: Returns the last _n_ elements from the list.
   # after: Returns the elements in the list that come after the
   # specified block.
-  # before: Returns the elements in the list that come before the
-  # specified block.
-  # sender: Returns events by sender
-  # actions: Return events with actions in the specified list
   allCupActs(
-    first: Block,
-    after: Block,
-    last: Block,
-    before: Block,
-    sender: Address,
-    actions: [Action]
-  )
-
-  air: String
-  axe: String
-  chi: String
-  fee: String
-  fit: String
-  fix: String
-  fog: String
-  cap: String
-  ice: String
-  ink: String
-  joy: String
-  mat: String
-  par: String
-  per: String
-  pie: String
-  pep: String
-  pip: String
-  rhi: String
-  s2s: String
-  tag: String
-  tapAsk: String
-  tapBid: String
-  tapGap: String
-  tau: String
-  tax: String
-  tubAsk: String
-  tubBid: String
-  tubGap: String
-  way: String
-  woe: String
+    first: Int,
+    last: Int,
+    before: Int,
+    after: Int
+  ): [CupAct]
 }
-
-enum CupState {
-  EMPTY
-  FUNDED
-  DRAWN
-}
-
-enum Acts {
-  JOIN
-  EXIT
-  BOOM
-  BUST
-  CAGE
-  CASH
-  OPEN
-  GIVE
-  LOCK
-  FREE
-  DRAW
-  WIPE
-  SHUT
-  BITE
-}
-
-scalar Address
-scalar Block
 ```
