@@ -13,19 +13,19 @@ and nothing more.
 
 ##### Console
 
-Explore the API via the interactive [in-browser IDE](https://dai-ql.herokuapp.com/console):
+Explore the API via the interactive [in-browser IDE](https://graphql.makerdao.com/v1/console):
 
 ![]({{ "images/graphql.png" | relative_url }})
 
 ##### Query Endpoint
 
-Interact with the API programatically via: [graphql.makerdao.com](https://dai-ql.herokuapp.com/)
+Interact with the API programatically via: [graphql.makerdao.com/v1](https://graphql.makerdao.com/v1)
 
 ```bash
 $ curl -XPOST  \
        -H "Content-Type:application/graphql" \
        -d 'query { getCup(id: 100) { id lad } }' \
-       http://dai-ql.herokuapp.com/
+       http://graphql.makerdao.com/v1
 
   {
     "data": {
