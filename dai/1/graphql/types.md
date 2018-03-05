@@ -13,6 +13,7 @@ type Cup {
   act: Act!            # Most recent cup action
   art: BigFloat!       # Outstanding debt DAI
   block: Int!          # Block at most recent action
+  deleted: Boolean!    # True if the cup has been shut
   id: Int!             # Unique Cup Id
   ink: BigFloat!       # Collateral PETH
   ire: BigFloat!       # Collateral less fee
@@ -29,6 +30,7 @@ type CupAct {
   arg: String!         # Action argument
   art: BigFloat!       # Debt DAI at block
   block: Int!          # Block number
+  deleted: Boolean!    # True if the cup has been shut
   id: Int!             # Cup Id
   ink: BigFloat!       # Collateral PETH at block
   lad: String!         # Cup owner

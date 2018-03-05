@@ -35,12 +35,17 @@ particular block height.
 #### allCups
 _Query across all Cups_
 
-Example: Retrieve the first 10 cups with the lowest collateralisation ratio along with
- 5 most recent actions, the total number of cups, and pagination info.
+Example: Retrieve the first 10 active cups with the lowest collateralisation
+ratio along with 5 most recent actions, the total number of cups matching the
+query, and pagination info.
 
 ```graphql
 {
-  allCups(first: 10, orderBy: RATIO_ASC) {
+  allCups(
+    first: 10,
+    condition: { deleted: false },
+    orderBy: RATIO_ASC
+  ) {
     totalCount
     pageInfo {
       hasNextPage

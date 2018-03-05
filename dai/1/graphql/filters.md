@@ -45,7 +45,10 @@ Multiple comparison operators:
 
 ```graphql
 query {
-  allCups(filter: { time: { greaterThan: "2018-01-01" } }) {
+  allCups(filter: {
+    act: { equalTo: "lock" },
+    time: { greaterThan: "2018-01-01" }
+  }) {
     ...
   }
 }
