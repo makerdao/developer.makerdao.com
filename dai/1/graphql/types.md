@@ -22,7 +22,7 @@ type Cup {
   ratio: BigFloat      # Current collateralisation ratio
   tab: BigFloat        # Collateral USD
   time: Datetime!      # Timestamp of most recent action
-  history: [CupAct!]   # Cup actions
+  actions: [CupAct!]   # Cup actions
 }
 
 type CupAct {

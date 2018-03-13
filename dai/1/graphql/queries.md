@@ -9,8 +9,8 @@ _Query a specific Cup by Id_
 
 Example: Retrieve Cup 3 `lad`, `ink` and `art` attributes along with 5 most
 recent actions. The top level attributes in this query represent the current
-cup state whilst the attributes in the history represent the state at a
-particular block height.
+cup state whilst the attributes `actions` represent the state at a particular
+block height.
 
 ```graphql
 {
@@ -18,7 +18,7 @@ particular block height.
     lad
     art
     ink
-    history(first: 5) {
+    actions(first: 5) {
       nodes {
         act
         arg
@@ -58,7 +58,7 @@ query, and pagination info.
       art
       ink
       ratio
-      history(first: 5) {
+      actions(first: 5) {
         nodes {
           act
           time
@@ -70,7 +70,7 @@ query, and pagination info.
 ```
 
 #### allCupActs
-_Query history across all Cup Actions_
+_Query across all Cup Actions_
 
 Example: Retrieve the 10 most recent `bite` acts.
 
