@@ -4,7 +4,7 @@ title: Oasis Query API
 subtitle: GraphQL
 ---
 
-### Oasis Query API beta
+### Query API
 
 GraphQL is a query language for APIs and a runtime for fulfilling those
 queries. It provides a complete and understandable description of the
