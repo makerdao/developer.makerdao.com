@@ -3,11 +3,14 @@ layout: oasis/graphql
 title: Oasis Query API - Trades
 ---
 
-#### Oasis Trades
+### Oasis Trades
 
 Full trade history.
 
-###### Types
+An `OasisTrade` represents a transaction matching some portion of an
+`OasisOffer` by msg.sender - `taker` for `bidAmt` of ERC20 `bidGem`. When a
+trade occurs, `lotAmt` of ERC20 `lotGem` is moved from Oasis to `taker` whilst
+`bidAmt` of ERC20 `bidGem` is moved from `taker` to the `maker`.
 
 ```graphql
 type OasisTrade {
@@ -30,9 +33,7 @@ type OasisTrade {
 }
 ```
 
-###### Queries
-
-```
+```graphql
 type Query {
 
    # Reads and enables pagination through a set of `OasisTrade`.
@@ -66,7 +67,7 @@ type Query {
 }
 ```
 
-###### Example
+#### Example
 
 Query buys from `0x0005ABcBB9533Cf6F9370505ffeF25393E0D2852` on the `WETH/DAI` pair:
 
@@ -97,6 +98,8 @@ query {
   }
 }
 ```
+
+###### Result
 
 ```json
 {
