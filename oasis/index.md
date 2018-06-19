@@ -27,10 +27,6 @@ single call. A [front-end](https://github.com/OasisDEX/oasis-direct-base) at
 [oasis.direct](https://oasis.direct) provides simplified access to multi-step
 trading operations on Oasis and leverage via Maker.
 
-##### Contracts
-
-[Documentation]({{ "oasis/contracts/" | relative_url }}) for the Solidty Contracts which facilitate trading on Oasis.
-
 ##### REST API
 
 Public read-only access to Oasis markets data is available over http via our
