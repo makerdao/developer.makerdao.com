@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+    {% include nav.html %}
+    <section class="jumbotron jumbotron-fluid">
+      <div class="container">
+        {% include oasis/nav.html %}
+      </div>
+    </section>
+    <section class="pt-5 pb-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-3 side-panel">
+            <h5>
+              <a href={{ "oasis/graphql/" | relative_url }}>GraphQL</a>
+            </h5>
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link" href={{ "oasis/graphql/" | relative_url }}>Overview</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-sm-9 api-content">
+            {{ content }}
+          </div>
+        </div>
+      </div>
+    </section>
+    {% include footer.html %}
+  </body>
+</html>
