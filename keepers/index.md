@@ -12,8 +12,8 @@ maintain market equilibrium. Strategies to arbitrage these opportunities can be
 codeified as keepers - automated bots which can detect and trade inefficienies
 across Dai Core, Oasis and USD exchanges.
 
-It's expected that developers and operators will evolve their own keepers over
-time. Here are a few of our reference keepers for inspiraton:
+It is expected that developers and operators will evolve their own keepers over
+time. Here are a few of our reference keepers for inspiration:
 
 ### Bite
 
