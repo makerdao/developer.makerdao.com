@@ -46,15 +46,14 @@ contract.
 
 The **arbitrage-keeper** will not work with multicollateral Dai, mainly because
 `boom` and `bust` actions will not be present in it anymore. Instead of that,
-surplus and bad debt will be liquidated via auctions. A reference `auction-keeper`
-will be released within the coming weeks.
+surplus and bad debt will be liquidated via auctions. Please see the `auction-keeper` below.
 
 
 ### auction-keeper
 
-The **[auction-keeper](https://github.com/makerdao/auction-keeper)** will be released
-to the public within the coming weeks. It will support surpus and bad debt auctions
-in multicollateral Dai.
+The **[auction-keeper](https://github.com/makerdao/auction-keeper)** is currently
+early work in progress, we plan to make it fully functional by the time of the
+multicollateral Dai launch. It will support surpus and bad debt auctions in multicollateral Dai.
 
 
 ### market-maker-keeper
