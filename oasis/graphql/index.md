@@ -56,4 +56,4 @@ And many more [here](http://graphql.org/code/#graphql-clients).
 
 ###### Schema
 
-Full schema documentation can be found [here](https://graphql-docs.com/docs/?graphqlUrl=https://data.makerdao.com/v1).
+Use the left submenu to browse the schema. Detailed docs can be found [here](https://graphql-docs.com/docs/?graphqlUrl=https://data.makerdao.com/v1).
