@@ -39,7 +39,10 @@ unsafe.
 The **[arbitrage-keeper](https://github.com/makerdao/arbitrage-keeper)** performs
 arbitrage on OasisDEX, `join`, `exit`, `boom` and `bust` actions. It constantly
 scans for profitable arbitrage opportunities and executes them the moment they
-become available.
+become available. Although a bit dated, it provides valuable source of information
+where to look for arbitrage opportunities in the Dai system and how to exploit them.
+It also supports atomic risk-free arbitrage via the [tx-manager](https://github.com/makerdao/tx-manager)
+contract.
 
 
 ### market-maker-keeper
