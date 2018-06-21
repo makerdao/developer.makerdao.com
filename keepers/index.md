@@ -44,6 +44,18 @@ where to look for arbitrage opportunities in the Dai system and how to exploit t
 It also supports atomic risk-free arbitrage via the [tx-manager](https://github.com/makerdao/tx-manager)
 contract.
 
+The **arbitrage-keeper** will not work with multicollateral Dai, mainly because
+`boom` and `bust` actions will not be present in it anymore. Instead of that,
+surplus and bad debt will be liquidated via auctions. A reference `auction-keeper`
+will be released within the coming weeks.
+
+
+### auction-keeper
+
+The **[auction-keeper](https://github.com/makerdao/auction-keeper)** will be released
+to the public within the coming weeks. It will support surpus and bad debt auctions
+in multicollateral Dai.
+
 
 ### market-maker-keeper
 
