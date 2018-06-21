@@ -7,16 +7,17 @@ title: Oasis Query API - Trades
 
 Full trade history.
 
-An `OasisTrade` represents a transaction matching some portion of an
-`OasisOffer` by msg.sender - `taker` for `bidAmt` of ERC20 `bidGem`. When a
-trade occurs, `lotAmt` of ERC20 `lotGem` is moved from Oasis to `taker` whilst
-`bidAmt` of ERC20 `bidGem` is moved from `taker` to the `maker`.
+An `OasisTrade` represents a transaction submitted by `msg.sender` (the
+`taker`) to match some portion of an `OasisOffer`.  When a trade occurs,
+`lotAmt` of ERC20 `lotGem` is moved from Oasis to `taker` whilst `bidAmt` of
+ERC20 `bidGem` is moved from the `taker` to the `maker`.
 
 ```graphql
 type OasisTrade {
   offerId:  Int        # Offer identifier
-  pairHash: String     # Trading pair hash
-  pair:     String     # Trading pair
+  market:   String     # Market base/quote symbol
+  act:      String     # Market action (buy|sell)
+  pair:     String     # Trading pair hash
   maker:    String     # Offer creator address
   taker:    String     # Trade creator address (msg.sender)
   lotGem:   String     # Lot token address
@@ -25,7 +26,7 @@ type OasisTrade {
   bidGem:   String     # Bid token address
   bidTkn:   String     # Bid token symbol
   bidAmt:   Float      # Bid amount matched by taker
-  price:    Float      # bid/lot price
+  price:    Float      # Market price (quote)
   block:    Int        # Block height
   time:     Datetime   # Block timestamp
   tx:       String     # Transaction hash
@@ -69,14 +70,14 @@ type Query {
 
 #### Example
 
-Query buys from `0x0005ABcBB9533Cf6F9370505ffeF25393E0D2852` on the `WETH/DAI` pair:
+Query trades from `0x0005ABcBB9533Cf6F9370505ffeF25393E0D2852` on the `WETHDAI` market:
 
 ```graphql
 query {
   allOasisTrades(
     first: 2,
     condition: {
-      pair: "WETH/DAI",
+      market: "WETHDAI",
       taker: "0x0005ABcBB9533Cf6F9370505ffeF25393E0D2852"
     }
     orderBy: BLOCK_DESC
@@ -91,6 +92,7 @@ query {
       bidTkn
       bidAmt
       price
+      act
       block
       time
       tx
@@ -105,33 +107,35 @@ query {
 {
   "data": {
     "allOasisTrades": {
-      "totalCount": 242,
+      "totalCount": 579,
       "nodes": [
         {
-          "offerId": 31785,
-          "maker": "0x4A16eCf42D72528264B8313b604493eaFef5D845",
+          "offerId": 75463,
+          "maker": "0xE5A55E40cf41Af9Dd463E16CEc9e299E52Be7e0E",
           "taker": "0x0005ABcBB9533Cf6F9370505ffeF25393E0D2852",
-          "lotTkn": "WETH",
-          "lotAmt": "38.349901493390284000",
-          "bidTkn": "DAI",
-          "bidAmt": "20325.447791496850000000",
-          "price": "529.999999999999986441",
-          "block": 5279967,
-          "time": "2018-03-18T23:15:00+00:00",
-          "tx": "0x97642ce2a16e90cedc50b126a30e1e1e42bfbbb8e5410ba0fd81cbc9434eba04"
+          "lotTkn": "DAI",
+          "lotAmt": "6243.744408617758000000",
+          "bidTkn": "WETH",
+          "bidAmt": "11.456411758931667000",
+          "price": "544.999999999999955047",
+          "act": "buy",
+          "block": 5817091,
+          "time": "2018-06-19T14:00:43+00:00",
+          "tx": "0x0b90b2c84446afefc602db621f7bedda891515bbccdbb5438635178d840af6dd"
         },
         {
-          "offerId": 31773,
-          "maker": "0x4A16eCf42D72528264B8313b604493eaFef5D845",
+          "offerId": 75463,
+          "maker": "0xE5A55E40cf41Af9Dd463E16CEc9e299E52Be7e0E",
           "taker": "0x0005ABcBB9533Cf6F9370505ffeF25393E0D2852",
-          "lotTkn": "WETH",
-          "lotAmt": "33.861028908660295000",
-          "bidTkn": "DAI",
-          "bidAmt": "17777.040177046656000000",
-          "price": "525.000000000000033224",
-          "block": 5279958,
-          "time": "2018-03-18T23:13:40+00:00",
-          "tx": "0x96b2822905b746405c41d09536ee001a27e39e2c7d121fe1266523193e832206"
+          "lotTkn": "DAI",
+          "lotAmt": "13047.840000000000000000",
+          "bidTkn": "WETH",
+          "bidAmt": "23.940990825688072000",
+          "price": "545.000000000000031745",
+          "act": "buy",
+          "block": 5817089,
+          "time": "2018-06-19T14:00:21+00:00",
+          "tx": "0xe618927578c58346db40ed18d3510ef97724315319f061b0a2c542e53f50bb07"
         }
       ]
     }
