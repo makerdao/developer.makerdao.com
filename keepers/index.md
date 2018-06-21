@@ -13,10 +13,20 @@ codified as keepers - automated bots which can detect and trade inefficiencies
 across Dai Core, OasisDEX and various other exchanges.
 
 It is expected that developers and operators will evolve their own keepers over
-time. Below you will find a list of our reference keepers. Bear in mind that this
-page is just a brief summary and you can find out more by reading individual keepers
-READMEs present in their GitHub repositories, or even by reading their source code
-which is usually quite well documented.
+time. Below you will find a list of our reference keepers.
+
+Bear in mind that this page is just a brief summary of reference keepers and that
+you can find out more by reading individual keeper READMEs present in
+[their GitHub repositories](https://github.com/search?p=1&q=topic%3Amaker-keeper+org%3Amakerdao&type=Repositories),
+or even by directly reading their source code which is usually quite well documented.
+We encourage developers to hack existing keeper implementations and to build new ones,
+either using the [pymaker](https://github.com/makerdao/pymaker) and
+[pyexchange](https://github.com/makerdao/pyexchange) libraries or completely from
+scratch. Due to profit opportunities inherent to the Maker ecosystem we expect
+the keeper space to grow over time.
+
+The community is always happy to answer your questions in the
+[#keeper](https://chat.makerdao.com/channel/keeper){:target="_blank"} RocketChat channel.
 
 
 ### bite-keeper
