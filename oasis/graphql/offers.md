@@ -1,22 +1,21 @@
 ---
 layout: oasis/graphql
-title: Oasis Query API - Trades
+title: Oasis Query API - Offers
 ---
 
-### Oasis Trades
+### Oasis Offers
 
-Full trade history.
+Full offer history.
 
-An `OasisTrade` represents a transaction submitted by `msg.sender` (the
-`taker`) to match some portion of an `OasisOffer`.  When a trade occurs,
-`lotAmt` of ERC20 `lotGem` is moved from Oasis to `taker` whilst `bidAmt` of
-ERC20 `bidGem` is moved from the `taker` to the `maker`.
+An `OasisOffer` represents a transaction submitted by `msg.sender` (the
+`maker`) to sell `lotAmt` of ERC20 `lotGem` for `bidAmt` of ERC20 `bidGem`.
+When an offer is submitted the `lot` is moved from the `maker` to Oasis.
 
 ```graphql
-type OasisTrade {
-  offerId:  Int        # Offer identifier
+type OasisOffer {
+  id:       Int        # Unique offer identifier
   market:   String     # Market base/quote symbol
-  act:      String     # Market action (buy|sell)
+  act:      String     # Market action (ask|bid)
   pair:     String     # Trading pair hash
   maker:    String     # Offer creator address
   taker:    String     # Trade creator address (msg.sender)
@@ -27,10 +26,12 @@ type OasisTrade {
   bidTkn:   String     # Bid token symbol
   bidAmt:   Float      # Bid amount matched by taker
   price:    Float      # Market price (quote)
+  filled:   Boolean    # true of the offer has been fully executed
+  killed:   Int        # 0 if the offer is live or block height when killed
   block:    Int        # Block height
   time:     Datetime   # Block timestamp
   tx:       String     # Transaction hash
-  offer:    OasisOffer
+  trades:   [OasisTrades]
 }
 ```
 
@@ -54,39 +55,38 @@ type Query {
    # values should be returned by the collection.
    # filter: A filter to be used in determining
    # which values should be returned by the collection.
-   allOasisTrades(
+   allOasisOffers(
      first: Int,
      last: Int,
      offset: Int,
      before: Cursor,
      after: Cursor,
-     orderBy: OasisTradesOrderBy,
-     condition: OasisTradeCondition,
-     filter: OasisTradeFilter
-   ): OasisTradesConnection
+     orderBy: OasisOffersOrderBy,
+     condition: OasisOfferCondition,
+     filter: OasisOfferFilter
+   ): OasisOffersConnection
 
 }
 ```
 
 #### Example
 
-Query trades from `0x0005ABcBB9533Cf6F9370505ffeF25393E0D2852` on the `WETHDAI` market:
+Query offers from `0x0005ABcBB9533Cf6F9370505ffeF25393E0D2852` on the `WETHDAI` market:
 
 ```graphql
 query {
-  allOasisTrades(
+  allOasisOffers(
     first: 2,
     condition: {
       market: "WETHDAI",
-      taker: "0x0005ABcBB9533Cf6F9370505ffeF25393E0D2852"
+      maker: "0x0005ABcBB9533Cf6F9370505ffeF25393E0D2852"
     }
     orderBy: BLOCK_DESC
   ) {
     totalCount
     nodes {
-      offerId
+      id
       maker
-      taker
       lotTkn
       lotAmt
       bidTkn
@@ -106,36 +106,34 @@ query {
 ```json
 {
   "data": {
-    "allOasisTrades": {
-      "totalCount": 579,
+    "allOasisOffers": {
+      "totalCount": 16187,
       "nodes": [
         {
-          "offerId": 75463,
-          "maker": "0xE5A55E40cf41Af9Dd463E16CEc9e299E52Be7e0E",
-          "taker": "0x0005ABcBB9533Cf6F9370505ffeF25393E0D2852",
-          "lotTkn": "DAI",
-          "lotAmt": "6243.744408617758000000",
-          "bidTkn": "WETH",
-          "bidAmt": "11.456411758931667000",
-          "price": "544.999999999999955047",
-          "act": "buy",
-          "block": 5817091,
-          "time": "2018-06-19T14:00:43+00:00",
-          "tx": "0x0b90b2c84446afefc602db621f7bedda891515bbccdbb5438635178d840af6dd"
+          "id": 76105,
+          "maker": "0x0005ABcBB9533Cf6F9370505ffeF25393E0D2852",
+          "lotTkn": "WETH",
+          "lotAmt": "9.577846307710560000",
+          "bidTkn": "DAI",
+          "bidAmt": "5098.358465657008000000",
+          "price": "532.307399999999984741",
+          "act": "ask",
+          "block": 5829608,
+          "time": "2018-06-21T17:29:30+00:00",
+          "tx": "0x40def45425295c286cbcfc9bbc8593ccd66bf670cc81f5ccba726be35289162b"
         },
         {
-          "offerId": 75463,
-          "maker": "0xE5A55E40cf41Af9Dd463E16CEc9e299E52Be7e0E",
-          "taker": "0x0005ABcBB9533Cf6F9370505ffeF25393E0D2852",
-          "lotTkn": "DAI",
-          "lotAmt": "13047.840000000000000000",
-          "bidTkn": "WETH",
-          "bidAmt": "23.940990825688072000",
-          "price": "545.000000000000031745",
-          "act": "buy",
-          "block": 5817089,
-          "time": "2018-06-19T14:00:21+00:00",
-          "tx": "0xe618927578c58346db40ed18d3510ef97724315319f061b0a2c542e53f50bb07"
+          "id": 76104,
+          "maker": "0x0005ABcBB9533Cf6F9370505ffeF25393E0D2852",
+          "lotTkn": "WETH",
+          "lotAmt": "14.422153692289440000",
+          "bidTkn": "DAI",
+          "bidAmt": "7686.581022240980000000",
+          "price": "532.970400000000017156",
+          "act": "ask",
+          "block": 5829588,
+          "time": "2018-06-21T17:24:34+00:00",
+          "tx": "0x20cf5765c8fce7ee4ecf16fbf302f89376ca32cef4a62187e661d8f5285e406b"
         }
       ]
     }
