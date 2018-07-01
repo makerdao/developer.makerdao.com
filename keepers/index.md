@@ -62,7 +62,7 @@ will be liquidated via auctions. Please see the `auction-keeper` below.
 ### auction-keeper
 
 The **[auction-keeper](https://github.com/makerdao/auction-keeper)** can participate
-in collateral (`flip`), bad debt (`flop`) and surplus (`flap`) auctions. It focuses on
+in collateral (`flip`), bad debt (`flop`) and surplus (`flap`) auctions. It focuses
 mostly on interaction with the smart contracts and supports pluggable _bidding models_,
 so that one can easily build their own auction participation strategies while not having
 do deal with the low-level smart contracts and Ethereum stuff.
