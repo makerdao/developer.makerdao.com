@@ -61,9 +61,14 @@ will be liquidated via auctions. Please see the `auction-keeper` below.
 
 ### auction-keeper
 
-The **[auction-keeper](https://github.com/makerdao/auction-keeper)** is currently
-early work in progress, we plan to make it fully functional by the time of the
-multicollateral Dai launch. It will support surpus and bad debt auctions in multicollateral Dai.
+The **[auction-keeper](https://github.com/makerdao/auction-keeper)** can participate
+in collateral (`flip`), bad debt (`flop`) and surplus (`flap`) auctions. It focuses on
+mostly on interaction with the smart contracts and supports pluggable _bidding models_,
+so that one can easily build their own auction participation strategies while not having
+do deal with the low-level smart contracts and Ethereum stuff.
+
+This keeper is currently early work in progress, but we plan to make it fully functional
+by the time of the multicollateral Dai launch.
 
 
 ### market-maker-keeper
