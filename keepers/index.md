@@ -89,6 +89,7 @@ As of today, the following exchanges are supported:
 * IDEX,
 * Bibox,
 * OKEX,
+* TheOcean,
 * gate.io.
 
 
