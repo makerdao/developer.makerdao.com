@@ -6,7 +6,7 @@ subtitle: API
 
 ### Debt Market
 
-System suplus accumulates in the `tap` as excess `dai` which are sold in
+System surplus accumulates in the `tap` as excess `dai` which are sold in
 exchange for collateral (`peth`) via `boom`.
 
 Siezed collateral from forced liquidations (`peth`) is also sent to the `tap`
