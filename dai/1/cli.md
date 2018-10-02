@@ -15,28 +15,20 @@ maintained by the [DappHub](https://dapphub.com) collective.
 
 #### Installing
 
-Dai is distributed via [the Nix package manager](https://nixos.org/nix),
-enabling cryptographically precise dependency tracking. First, install Nix
-itself:
+Dai is part of the [dapp.tools suite](https://dapp.tools). Install the suite with:
 
-    $ curl https://nixos.org/nix/install | sh
+    $ curl https://dapp.tools/install | sh
 
-Then add DappHub's distribution channel and install `dai`:
+Then install the `dai` package with:
 
-    $ nix-channel --add https://nix.dapphub.com/pkgs/dapphub
-    $ nix-channel --update
-    $ nix-env -iA dapphub.dai
-
-See [dapp.tools](https://dapp.tools) for more software available through our
-channel.
+    $ dapp pkg install dai
 
 #### Upgrading
 
 To upgrade Dai to the latest release, update the channel and then
 reinstall:
 
-    $ nix-channel --update
-    $ nix-env -iA dapphub.dai
+    $ dapp pkg update dai
 
 #### Configuration
 
