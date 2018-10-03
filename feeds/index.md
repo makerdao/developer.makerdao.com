@@ -45,7 +45,7 @@ are deployed and owned by feed operators. Price feed contracts which have been
 whitelisted by the `medianizer` are able to forward their prices for inclusion in
 the medianized price.
 
-[price feed]: https://github/com/makerdao/price-feed
+[price feed]: https://github.com/makerdao/price-feed
 
 #### The Medianizer
 
