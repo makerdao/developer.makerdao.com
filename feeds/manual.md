@@ -23,11 +23,8 @@ These are the steps required to deploy your own [price feed](https://github.com/
 ### Installing DappHub's development tools
 
 ```
-$ curl https://nixos.org/nix/install | sh
-$ . $HOME/.nix-profile/etc/profile.d/nix.sh
-$ nix-channel --add https://nix.dapphub.com/pkgs/dapphub
-$ nix-channel --update
-$ nix-env -iA dapphub.{'{dapp,seth,solc,jshon,bc}'}
+$ curl https://dapp.tools/install | sh
+$ dapp pkg install seth
 ```
 
 More info at [dapp.tools](https://dapp.tools)
@@ -37,10 +34,7 @@ More info at [dapp.tools](https://dapp.tools)
 [setzer](https://github.com/makerdao/setzer) is our tool to handle feeds.
 
 ```
-$ sudo apt install -y make
-$ git clone https://github.com/makerdao/setzer
-$ cd setzer
-$ sudo make link
+$ dapp pkg install setzer
 ```
 ### Deploying your price feed
 
