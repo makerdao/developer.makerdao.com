@@ -24,7 +24,7 @@ These are the steps required to deploy your own [price feed](https://github.com/
 
 ```
 $ curl https://dapp.tools/install | sh
-$ dapp pkg install dapp seth solc jshon bc
+$ dapp pkg install seth
 ```
 
 More info at [dapp.tools](https://dapp.tools)
