@@ -25,8 +25,7 @@ Then install the `dai` package with:
 
 #### Upgrading
 
-To upgrade Dai to the latest release, update the channel and then
-reinstall:
+To upgrade Dai to the latest release, run:
 
     $ dapp pkg update dai
 
