@@ -6,6 +6,12 @@ subtitle: GraphQL
 
 ### Query API
 
+_Status: prototype - not suitable for production use._
+
+_This is an early prototype service which is intended to allow developers to experiment
+with a GraphQL api, whilst informing development of our production api, which is being
+built with VulcanizeDB._
+
 GraphQL is a query language for APIs and a runtime for fulfilling those
 queries. It provides a complete and understandable description of the
 available data, and gives clients the power to ask for exactly what they need
