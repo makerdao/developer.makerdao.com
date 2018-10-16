@@ -5,6 +5,9 @@ title: Oasis API - Markets
 
 ##### GET markets/
 
+The markets/ call has been deprecated.
+Please use the markets/abc/xyz subquery below to query information for a specific token pair. 
+
 High level overview of all active markets.
 
 ```bash
