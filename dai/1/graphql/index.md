@@ -25,13 +25,13 @@ Explore the API via the interactive [in-browser IDE](https://graphql.makerdao.co
 
 ##### Query Endpoint
 
-Interact with the API programatically via: [graphql.makerdao.com/v1](https://graphql.makerdao.com/v1)
+Interact with the API programatically via: [sai-mainnet.makerfoundation.com/v1](https://sai-mainnet.makerfoundation.com/v11)
 
 ```bash
 $ curl -XPOST  \
        -H "Content-Type:application/graphql" \
        -d 'query { getCup(id: 100) { id lad } }' \
-       http://graphql.makerdao.com/v1
+       https://sai-mainnet.makerfoundation.com/v1
 
   {
     "data": {
