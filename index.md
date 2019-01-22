@@ -3,13 +3,6 @@ layout: home
 title: Developer
 ---
 
-## Trade
-<p class="lead">Trade with OasisDex - our decentralized exchange. </p>
-
-A fully on-chain ERC20 exchange, with leverage by Maker.
-
-[Learn more]({{ "oasis/" | relative_url }})
-
 ## Borrow
 <p class="lead">Deposit collateral to access Dai-denominated credit.</p>
 
