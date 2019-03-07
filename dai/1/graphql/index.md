@@ -31,7 +31,7 @@ Interact with the API programatically via: [sai-mainnet.makerfoundation.com/v1](
 $ curl -XPOST  \
        -H "Content-Type:application/graphql" \
        -d 'query { getCup(id: 100) { id lad } }' \
-       http://sai-mainnet.makerfoundation.com/v1
+       https://sai-mainnet.makerfoundation.com/v1
 
   {
     "data": {
