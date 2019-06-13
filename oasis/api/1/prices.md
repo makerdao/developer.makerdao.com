@@ -1,6 +1,7 @@
 ---
 layout: oasis/api
 title: Oasis API - Prices
+apiVersion: 1
 ---
 
 ##### GET prices/
