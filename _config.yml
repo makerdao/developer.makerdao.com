@@ -8,6 +8,7 @@ dai-tub: 0xf24888d405776cc56d29e70448172380708bb7a5
 dai-top: 0xf24888d405776cc56d29e70448172380708bb7a5
 
 apiRoot: http://api.oasisdex.com/v1
+apiRootV2: http://api.oasisdex.com/v2
 
 plugins:
  - jekyll-redirect-from

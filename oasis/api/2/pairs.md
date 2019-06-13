@@ -1,16 +1,16 @@
 ---
 layout: oasis/api
 title: Oasis API - Pairs
-apiVersion: 1
+apiVersion: 2
 ---
 
 ##### GET pairs/
 
-Return information on all available pairs
+Retrieve information on all available pairs.
 
 ```bash
 curl --request GET \
-  --url {{ site.apiRoot }}/pairs/
+  --url {{ site.apiRootV2 }}/pairs/
 ```
 
 ```javascript
@@ -36,18 +36,18 @@ curl --request GET \
     },
     ...
   },
-  "time": 1513379816,         // Unix timestamp at which info was valid
-  "message": "success"        // Status message
+  "time": "2019-06-13T10:49:40.639Z",  // Timestamp at which info was valid
+  "message": "success"                 // Status message
 }
 ```
 
-##### GET pairs/abc/xyz
+##### GET pairs/`$base`/`$quote`
 
-Return information for a specific pair
+Retrieve information for a given pair of `$base` and `$quote`.
 
 ```bash
 curl --request GET \
-  --url {{ site.apiRoot }}/pairs/mkr/eth
+  --url {{ site.apiRootV2 }}/pairs/mkr/eth
 ```
 
 ```javascript
@@ -61,13 +61,13 @@ curl --request GET \
     "quotePrecision": "18", // Decimal quote precision
     "active":  true,        // Whether or not trading is enabled
   },
-  "time": 1513379816,       // Unix timestamp at which info was valid
-  "message": "success"      // Status message
+  "time": "2019-06-13T10:49:40.639Z",  // Timestamp at which info was valid
+  "message": "success"                 // Status message
 }
 400 Bad Request
 {
   "data": {},
-  "time": 1513379816,
+  "time": "2019-06-13T10:49:40.639Z",
   "message": "Unknown pair"
 }
 ```

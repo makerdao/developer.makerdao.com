@@ -1,6 +1,7 @@
 ---
 layout: oasis/api
 title: Oasis API - Volumes
+apiVersion: 1
 ---
 
 ##### GET volumes/

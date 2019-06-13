@@ -1,6 +1,7 @@
 ---
 layout: oasis/api
 title: Oasis API - Markets
+apiVersion: 1
 ---
 
 ##### GET markets/
@@ -70,4 +71,3 @@ curl --request GET \
   "message": "Unknown pair"
 }
 ```
-

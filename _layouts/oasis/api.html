@@ -12,21 +12,19 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-3 side-panel">
+            {% assign baseUrl = "oasis/api/" | append: page.apiVersion %}
             <h5>
-              <a href={{ "oasis/api/1/" | relative_url }}>API v1</a>
+              <a href={{ baseUrl | relative_url }}>API v{{ page.apiVersion }}</a>
             </h5>
             <ul class="nav flex-column">
               <li class="nav-item">
-                <a class="nav-link" href={{ "oasis/api/1/pairs" | relative_url }}>Pairs</a>
+                <a class="nav-link" href={{ baseUrl | append: "/markets" | relative_url }}>Markets</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href={{ "oasis/api/1/markets" | relative_url }}>Markets</a>
+                <a class="nav-link" href={{ baseUrl | append: "/prices" | relative_url }}>Prices</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href={{ "oasis/api/1/prices" | relative_url }}>Prices</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href={{ "oasis/api/1/volumes" | relative_url }}>Volumes</a>
+                <a class="nav-link" href={{ baseUrl | append: "/volumes" | relative_url }}>Volumes</a>
               </li>
             </ul>
           </div>
