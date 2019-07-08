@@ -26,6 +26,14 @@
               <li class="nav-item">
                 <a class="nav-link" href={{ baseUrl | append: "/volumes" | relative_url }}>Volumes</a>
               </li>
+              {% if page.apiVersion >= 2 %}
+                <li class="nav-item">
+                  <a class="nav-link" href={{ baseUrl | append: "/orders" | relative_url }}>Orders</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href={{ baseUrl | append: "/trades" | relative_url }}>Trades</a>
+                </li>
+              {% endif %}
             </ul>
           </div>
           <div class="col-sm-9 api-content">
