@@ -4,13 +4,12 @@ title: Oasis API - Volumes
 apiVersion: 2
 ---
 
-##### GET volumes/
+##### GET volumes
 
 Retrieve volume info for all known pairs.
 
 ```bash
-curl --request GET \
-  --url {{ site.apiRootV2 }}/volumes/
+curl -X GET {{ site.apiRootV2 }}/volumes
 ```
 
 ```javascript
@@ -34,8 +33,7 @@ curl --request GET \
 Retrieve volume info for a given pair of `$base` and `$quote`.
 
 ```bash
-curl --request GET \
-  --url {{ site.apiRootV2 }}/volumes/mkr/eth
+curl -X GET {{ site.apiRootV2 }}/volumes/eth/dai
 ```
 
 ```javascript
@@ -50,7 +48,6 @@ curl --request GET \
 }
 400 BAD REQUEST
 {
-  "data": {},
   "time": "2019-06-13T10:49:40.639Z",
   "message": "Unknown pair"
 }

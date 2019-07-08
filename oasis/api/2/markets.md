@@ -4,13 +4,12 @@ title: Oasis API - Markets
 apiVersion: 2
 ---
 
-##### GET markets/
+##### GET markets
 
 Show high level overview of all known markets.
 
 ```bash
-curl --request GET \
-  --url {{ site.apiRootV2 }}/markets/
+curl -X GET {{ site.apiRootV2 }}/markets
 ```
 
 ```javascript
@@ -41,8 +40,7 @@ curl --request GET \
 Show high level overview of markets for trading `$base` with `$quote`.
 
 ```bash
-curl --request GET \
-  --url {{ site.apiRootV2 }}/markets/mkr/eth
+curl -X GET {{ site.apiRootV2 }}/markets/eth/dai
 ```
 
 ```javascript
@@ -64,7 +62,6 @@ curl --request GET \
 }
 400 Bad Request
 {
-  "data": {},
   "time": "2019-06-13T10:49:40.639Z",
   "message": "Unknown pair"
 }
