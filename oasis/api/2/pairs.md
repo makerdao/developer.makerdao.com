@@ -4,13 +4,12 @@ title: Oasis API - Pairs
 apiVersion: 2
 ---
 
-##### GET pairs/
+##### GET pairs
 
 Retrieve information on all available pairs.
 
 ```bash
-curl --request GET \
-  --url {{ site.apiRootV2 }}/pairs/
+curl -X GET {{ site.apiRootV2 }}/pairs
 ```
 
 ```javascript
@@ -46,8 +45,7 @@ curl --request GET \
 Retrieve information for a given pair of `$base` and `$quote`.
 
 ```bash
-curl --request GET \
-  --url {{ site.apiRootV2 }}/pairs/mkr/eth
+curl -X GET {{ site.apiRootV2 }}/pairs/mkr/eth
 ```
 
 ```javascript
@@ -66,7 +64,6 @@ curl --request GET \
 }
 400 Bad Request
 {
-  "data": {},
   "time": "2019-06-13T10:49:40.639Z",
   "message": "Unknown pair"
 }

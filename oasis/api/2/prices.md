@@ -4,13 +4,12 @@ title: Oasis API - Prices
 apiVersion: 2
 ---
 
-##### GET prices/
+##### GET prices
 
 Retrieve price info for all known pairs.
 
 ```bash
-curl --request GET \
-  --url {{ site.apiRootV2 }}/prices/
+curl -X GET {{ site.apiRootV2 }}/prices
 ```
 
 ```javascript
@@ -38,8 +37,7 @@ curl --request GET \
 Retrieve price info for a given pair of `$base` and `$quote`.
 
 ```bash
-curl --request GET \
-  --url {{ site.apiRootV2 }}/prices/eth/dai
+curl -X GET {{ site.apiRootV2 }}/prices/eth/dai
 ```
 
 ```javascript
@@ -59,7 +57,6 @@ curl --request GET \
 
 400 BAD REQUEST
 {
-  "data": {},
   "time": "2019-06-13T10:49:40.639Z",
   "message": "Unknown pair"
 }
