@@ -9,15 +9,9 @@ apiVersion: 2
 
 Public REST endpoints for Oasis markets data.
 
-#### Supported markets
+#### Supported trading pairs
 
-Currently the following token pairs are supported (`base`/`quote`):
-- WETH/DAI
-- MKR/WETH
-- MKR/DAI
-- DGD/WETH
-- REP/WETH
-- RHOC/WETH
+See <a href="pairs">Pairs</a>.
 
 #### Notes
 
