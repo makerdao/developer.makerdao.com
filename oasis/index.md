@@ -30,4 +30,4 @@ trading operations on Oasis and leverage via Maker.
 ##### REST API
 
 Public read-only access to Oasis markets data is available over http via our
-[REST API]({{ "oasis/api/1/" | relative_url }}).
+[REST API](https://developer.makerdao.com/oasis/api/2/)
