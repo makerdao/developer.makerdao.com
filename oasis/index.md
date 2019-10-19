@@ -13,21 +13,19 @@ Oasis is a liquidity pool on the Ethereum blockchain. The Simple Market and
 Matching Market smart contracts provide for the trustless atomic exchange of
 ERC20 tokens without third party counter-risk.
 
-##### OasisDex
+##### Oasis Trade
 
-The market can be accessed via solidity, web3, python, with a
-[front-end](https://github.com/OasisDEX/oasis) available at
-[oasisdex.com](https://oasisdex.com),
+The market can be accessed directly from Ethereum or with
+the official front-end available at [oasis.app/trade](https://oasis.app/trade).
 
-##### OasisDirect
+##### Oasis Trade Instant
 
-Oasis Direct makes use of proxy contract functionality from
+Instant trade module makes use of proxy contract functionality from
 [Dappsys](https://dapp.tools/dappsys) to bundle multiple transactions into a
-single call. A [front-end](https://github.com/OasisDEX/oasis-direct-base) at
-[oasis.direct](https://oasis.direct) provides simplified access to multi-step
+single call. The front-end provides simplified access to multi-step
 trading operations on Oasis and leverage via Maker.
 
 ##### REST API
 
 Public read-only access to Oasis markets data is available over http via our
-[REST API](https://developer.makerdao.com/oasis/api/2/)
+[REST API v2]({{ "oasis/api/2/" | relative_url }}).

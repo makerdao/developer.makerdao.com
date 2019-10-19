@@ -17,25 +17,17 @@ curl -X GET {{ site.apiRootV2 }}/pairs
 {
   "data":
   {
-    "MKR/ETH":
-    {
-      "base": "MKR",          // Base
-      "quote": "ETH",         // Quote
-      "basePrecision": "18",  // Decimal base precision
-      "quotePrecision": "18", // Decimal quote precision
-      "active":  true,        // Whether or not trading is enabled
-    },
     "ETH/DAI":
     {
-      "base": "ETH",
-      "quote": "DAI",
-      "basePrecision": "18",
-      "quotePrecision": "18",
-      "active":  true,
+      "base": "ETH",          // Base token
+      "quote": "DAI",         // Quote token
+      "basePrecision": "18",  // Decimal base token precision
+      "quotePrecision": "18", // Decimal quote token precision
+      "active": true,         // Whether or not trading is enabled
     },
     ...
   },
-  "time": "2019-06-13T10:49:40.639Z",  // Timestamp at which info was valid
+  "time": "2019-07-10T16:20:40.639Z",  // Timestamp at which info was valid
   "message": "success"                 // Status message
 }
 ```
@@ -45,7 +37,7 @@ curl -X GET {{ site.apiRootV2 }}/pairs
 Retrieve information for a given pair of `$base` and `$quote`.
 
 ```bash
-curl -X GET {{ site.apiRootV2 }}/pairs/mkr/eth
+curl -X GET {{ site.apiRootV2 }}/pairs/eth/dai
 ```
 
 ```javascript
@@ -53,18 +45,18 @@ curl -X GET {{ site.apiRootV2 }}/pairs/mkr/eth
 {
   "data":
   {
-    "base": "MKR",          // Base
-    "quote": "ETH",         // Quote
-    "basePrecision": "18",  // Decimal base precision
-    "quotePrecision": "18", // Decimal quote precision
-    "active":  true,        // Whether or not trading is enabled
+    "base": "ETH",          // Base token
+    "quote": "DAI",         // Quote token
+    "basePrecision": "18",  // Decimal base token precision
+    "quotePrecision": "18", // Decimal quote token precision
+    "active": true,         // Whether or not trading is enabled
   },
-  "time": "2019-06-13T10:49:40.639Z",  // Timestamp at which info was valid
+  "time": "2019-07-10T16:20:40.639Z",  // Timestamp at which info was valid
   "message": "success"                 // Status message
 }
 400 Bad Request
 {
-  "time": "2019-06-13T10:49:40.639Z",
+  "time": "2019-07-10T16:20:40.639Z",
   "message": "Unknown pair"
 }
 ```
