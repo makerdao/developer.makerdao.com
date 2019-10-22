@@ -1,6 +1,7 @@
 ---
 layout: oasis/api
 title: Oasis API - Pairs
+apiVersion: 1
 ---
 
 ##### GET pairs/
