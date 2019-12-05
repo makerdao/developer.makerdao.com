@@ -9,10 +9,6 @@ title: Oasis
   Decentralized ERC20 exchange with borrowing & leverage by Maker
 </p>
 
-_Announcement: On Monday 18th of November 2019 at 10am UTC we are going to rename DAI markets to SAI markets on our APIs (both RestAPI and GraphQL)._
-
-_Later that day, after 4pm UTC, we are gonna reintroduce DAI markets but DAI will point to new MultiCollateral DAI token._
-
 Oasis is a liquidity pool on the Ethereum blockchain. The Simple Market and
 Matching Market smart contracts provide for the trustless atomic exchange of
 ERC20 tokens without third party counter-risk.
